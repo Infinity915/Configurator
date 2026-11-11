@@ -1,0 +1,10 @@
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\config\WebConfig.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\controllers\GeneratorController.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\dto\GenerateCollectionRequest.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\dto\PostmanRequest.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\GatewayApplication.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\models\ApiTemplate.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\repositories\ApiTemplateRepository.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\services\AgenticWorkflowService.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\services\GeneratorService.java
+D:\api_configurator_withchnages\backend\src\main\java\com\compliance\gateway\services\SwaggerImporterService.java

@@ -1,0 +1,1377 @@
+{
+  "info": {
+    "_postman_id": "bfce4b0c-4253-43c9-a59a-bac7efe3b220",
+    "name": "Leah Client Operation Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49245446"
+  },
+  "item": [
+    {
+      "name": "Client",
+      "item": [
+        {
+          "name": "Get Client type",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client-type",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client-type"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Client type",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client-type",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client-type"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 16 Feb 2026 08:26:58 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:54d0ca8c-2017-48e8-8b28-d4418bca8052"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"totalRecords\": 3,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"clientTypeName\": \"Vendor\",\n            \"isActive\": true,\n            \"isForAllApplicationTypes\": true,\n            \"applicationTypeNamesString\": \"\",\n            \"applicationTypes\": [],\n            \"clientTypeFieldsVisibility\": {\n                \"partner\": {\n                    \"fieldDisplayName\": \"Party\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"name\",\n                    \"clientTypeFieldId\": 1,\n                    \"helpText\": null\n                },\n                \"address\": {\n                    \"fieldDisplayName\": \"Address\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"address\",\n                    \"clientTypeFieldId\": 2,\n                    \"helpText\": null\n                },\n                \"country\": {\n                    \"fieldDisplayName\": \"Country\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"country\",\n                    \"clientTypeFieldId\": 3,\n                    \"helpText\": null\n                },\n                \"contactName\": {\n                    \"fieldDisplayName\": \"Contact Name\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"contactName\",\n                    \"clientTypeFieldId\": 5,\n                    \"helpText\": null\n                },\n                \"email\": {\n                    \"fieldDisplayName\": \"Email\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"email\",\n                    \"clientTypeFieldId\": 4,\n                    \"helpText\": null\n                },\n                \"contact\": {\n                    \"fieldDisplayName\": \"Phone Number\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"contact\",\n                    \"clientTypeFieldId\": 6,\n                    \"helpText\": null\n                },\n                \"city\": {\n                    \"fieldDisplayName\": \"City\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"city\",\n                    \"clientTypeFieldId\": 7,\n                    \"helpText\": null\n                },\n                \"state\": {\n                    \"fieldDisplayName\": \"State\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"state\",\n                    \"clientTypeFieldId\": 8,\n                    \"helpText\": null\n                },\n                \"zipCode\": {\n                    \"fieldDisplayName\": \"Zip Code\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 2,\n                    \"fieldCode\": \"zipCode\",\n                    \"clientTypeFieldId\": 9,\n                    \"helpText\": null\n                }\n            }\n        },\n        {\n            \"id\": 3,\n            \"clientTypeName\": \"Others\",\n            \"isActive\": false,\n            \"isForAllApplicationTypes\": true,\n            \"applicationTypeNamesString\": \"\",\n            \"applicationTypes\": [],\n            \"clientTypeFieldsVisibility\": {\n                \"partner\": {\n                    \"fieldDisplayName\": \"Party\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"name\",\n                    \"clientTypeFieldId\": 1,\n                    \"helpText\": null\n                },\n                \"address\": {\n                    \"fieldDisplayName\": \"Address\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"address\",\n                    \"clientTypeFieldId\": 2,\n                    \"helpText\": null\n                },\n                \"country\": {\n                    \"fieldDisplayName\": \"Country\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"country\",\n                    \"clientTypeFieldId\": 3,\n                    \"helpText\": null\n                },\n                \"contactName\": {\n                    \"fieldDisplayName\": \"Contact Name\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"contactName\",\n                    \"clientTypeFieldId\": 5,\n                    \"helpText\": null\n                },\n                \"email\": {\n                    \"fieldDisplayName\": \"Email\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"email\",\n                    \"clientTypeFieldId\": 4,\n                    \"helpText\": null\n                },\n                \"contact\": {\n                    \"fieldDisplayName\": \"Phone Number\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"contact\",\n                    \"clientTypeFieldId\": 6,\n                    \"helpText\": null\n                },\n                \"city\": {\n                    \"fieldDisplayName\": \"City\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"city\",\n                    \"clientTypeFieldId\": 7,\n                    \"helpText\": null\n                },\n                \"state\": {\n                    \"fieldDisplayName\": \"State\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"state\",\n                    \"clientTypeFieldId\": 8,\n                    \"helpText\": null\n                },\n                \"zipCode\": {\n                    \"fieldDisplayName\": \"Zip Code\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 3,\n                    \"fieldCode\": \"zipCode\",\n                    \"clientTypeFieldId\": 9,\n                    \"helpText\": null\n                }\n            }\n        },\n        {\n            \"id\": 1,\n            \"clientTypeName\": \"Customer\",\n            \"isActive\": false,\n            \"isForAllApplicationTypes\": true,\n            \"applicationTypeNamesString\": \"\",\n            \"applicationTypes\": [],\n            \"clientTypeFieldsVisibility\": {\n                \"partner\": {\n                    \"fieldDisplayName\": \"Party\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"name\",\n                    \"clientTypeFieldId\": 1,\n                    \"helpText\": null\n                },\n                \"address\": {\n                    \"fieldDisplayName\": \"Address\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"address\",\n                    \"clientTypeFieldId\": 2,\n                    \"helpText\": null\n                },\n                \"country\": {\n                    \"fieldDisplayName\": \"Country\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"country\",\n                    \"clientTypeFieldId\": 3,\n                    \"helpText\": null\n                },\n                \"contactName\": {\n                    \"fieldDisplayName\": \"Contact Name\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"contactName\",\n                    \"clientTypeFieldId\": 5,\n                    \"helpText\": null\n                },\n                \"email\": {\n                    \"fieldDisplayName\": \"Email\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"email\",\n                    \"clientTypeFieldId\": 4,\n                    \"helpText\": null\n                },\n                \"contact\": {\n                    \"fieldDisplayName\": \"Phone Number\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"contact\",\n                    \"clientTypeFieldId\": 6,\n                    \"helpText\": null\n                },\n                \"city\": {\n                    \"fieldDisplayName\": \"City\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"city\",\n                    \"clientTypeFieldId\": 7,\n                    \"helpText\": null\n                },\n                \"state\": {\n                    \"fieldDisplayName\": \"State\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"state\",\n                    \"clientTypeFieldId\": 8,\n                    \"helpText\": null\n                },\n                \"zipCode\": {\n                    \"fieldDisplayName\": \"Zip Code\",\n                    \"isVisible\": true,\n                    \"isRequired\": false,\n                    \"clientTypeId\": 1,\n                    \"fieldCode\": \"zipCode\",\n                    \"clientTypeFieldId\": 9,\n                    \"helpText\": null\n                }\n            }\n        }\n    ],\n    \"statusCode\": 200,\n    \"message\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Country",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{old_api}}/api/{{tenant-name}}/v1/masters/country?requestorUsername={{requestorUserName}}",
+              "host": [
+                "{{old_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "v1",
+                "masters",
+                "country"
+              ],
+              "query": [
+                {
+                  "key": "requestorUsername",
+                  "value": "{{requestorUserName}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Country",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{old_api}}/api/{{tenant-name}}/v1/masters/country?requestorUsername={{requestorUserName}}",
+                  "host": [
+                    "{{old_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "v1",
+                    "masters",
+                    "country"
+                  ],
+                  "query": [
+                    {
+                      "key": "requestorUsername",
+                      "value": "{{requestorUserName}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 16 Feb 2026 08:35:35 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "29379"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "-1"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1, 2"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-azure-ref",
+                  "value": "20260216T083535Z-169ccc4d889rhhwrhC1BOMmxd000000027p000000001mft6"
+                },
+                {
+                  "key": "X-Cache",
+                  "value": "CONFIG_NOCACHE"
+                },
+                {
+                  "key": "Accept-Ranges",
+                  "value": "bytes"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Afghanistan\",\n        \"code\": \"AFG\",\n        \"alpha2Code\": \"AF\",\n        \"alpha3Code\": \"AFG\",\n        \"numericCode\": \"004\",\n        \"default\": false\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Aland Islands\",\n        \"code\": \"ALA\",\n        \"alpha2Code\": \"AX\",\n        \"alpha3Code\": \"ALA\",\n        \"numericCode\": \"248\",\n        \"default\": false\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Albania\",\n        \"code\": \"ALB\",\n        \"alpha2Code\": \"AL\",\n        \"alpha3Code\": \"ALB\",\n        \"numericCode\": \"008\",\n        \"default\": false\n    },\n    {\n        \"id\": 62,\n        \"name\": \"Algeria\",\n        \"code\": \"DZA\",\n        \"alpha2Code\": \"DZ\",\n        \"alpha3Code\": \"DZA\",\n        \"numericCode\": \"012\",\n        \"default\": false\n    },\n    {\n        \"id\": 11,\n        \"name\": \"American Samoa\",\n        \"code\": \"ASM\",\n        \"alpha2Code\": \"AS\",\n        \"alpha3Code\": \"ASM\",\n        \"numericCode\": \"016\",\n        \"default\": false\n    },\n    {\n        \"id\": 105,\n        \"name\": \"Andorra\",\n        \"code\": \"AND\",\n        \"alpha2Code\": \"AD\",\n        \"alpha3Code\": \"AND\",\n        \"numericCode\": \"020\",\n        \"default\": false\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Angola\",\n        \"code\": \"AGO\",\n        \"alpha2Code\": \"AO\",\n        \"alpha3Code\": \"AGO\",\n        \"numericCode\": \"024\",\n        \"default\": false\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Anguilla\",\n        \"code\": \"AIA\",\n        \"alpha2Code\": \"AI\",\n        \"alpha3Code\": \"AIA\",\n        \"numericCode\": \"660\",\n        \"default\": false\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Antarctica\",\n        \"code\": \"ATA\",\n        \"alpha2Code\": \"AQ\",\n        \"alpha3Code\": \"ATA\",\n        \"numericCode\": \"010\",\n        \"default\": false\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Antigua and Barbuda\",\n        \"code\": \"ATG\",\n        \"alpha2Code\": \"AG\",\n        \"alpha3Code\": \"ATG\",\n        \"numericCode\": \"028\",\n        \"default\": false\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Argentina\",\n        \"code\": \"ARG\",\n        \"alpha2Code\": \"AR\",\n        \"alpha3Code\": \"ARG\",\n        \"numericCode\": \"032\",\n        \"default\": false\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Armenia\",\n        \"code\": \"ARM\",\n        \"alpha2Code\": \"AM\",\n        \"alpha3Code\": \"ARM\",\n        \"numericCode\": \"051\",\n        \"default\": false\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Aruba\",\n        \"code\": \"ABW\",\n        \"alpha2Code\": \"AW\",\n        \"alpha3Code\": \"ABW\",\n        \"numericCode\": \"533\",\n        \"default\": false\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Australia\",\n        \"code\": \"AUS\",\n        \"alpha2Code\": \"AU\",\n        \"alpha3Code\": \"AUS\",\n        \"numericCode\": \"036\",\n        \"default\": false\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Austria\",\n        \"code\": \"AUT\",\n        \"alpha2Code\": \"AT\",\n        \"alpha3Code\": \"AUT\",\n        \"numericCode\": \"040\",\n        \"default\": false\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Azerbaijan\",\n        \"code\": \"AZE\",\n        \"alpha2Code\": \"AZ\",\n        \"alpha3Code\": \"AZE\",\n        \"numericCode\": \"031\",\n        \"default\": false\n    },\n    {\n        \"id\": 32,\n        \"name\": \"Bahamas\",\n        \"code\": \"BHS\",\n        \"alpha2Code\": \"BS\",\n        \"alpha3Code\": \"BHS\",\n        \"numericCode\": \"044\",\n        \"default\": false\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Bahrain\",\n        \"code\": \"BHR\",\n        \"alpha2Code\": \"BH\",\n        \"alpha3Code\": \"BHR\",\n        \"numericCode\": \"048\",\n        \"default\": false\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Bangladesh\",\n        \"code\": \"BGD\",\n        \"alpha2Code\": \"BD\",\n        \"alpha3Code\": \"BGD\",\n        \"numericCode\": \"050\",\n        \"default\": false\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Barbados\",\n        \"code\": \"BRB\",\n        \"alpha2Code\": \"BB\",\n        \"alpha3Code\": \"BRB\",\n        \"numericCode\": \"052\",\n        \"default\": false\n    },\n    {\n        \"id\": 36,\n        \"name\": \"Belarus\",\n        \"code\": \"BLR\",\n        \"alpha2Code\": \"BY\",\n        \"alpha3Code\": \"BLR\",\n        \"numericCode\": \"112\",\n        \"default\": false\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Belgium\",\n        \"code\": \"BEL\",\n        \"alpha2Code\": \"BE\",\n        \"alpha3Code\": \"BEL\",\n        \"numericCode\": \"056\",\n        \"default\": false\n    },\n    {\n        \"id\": 37,\n        \"name\": \"Belize\",\n        \"code\": \"BLZ\",\n        \"alpha2Code\": \"BZ\",\n        \"alpha3Code\": \"BLZ\",\n        \"numericCode\": \"084\",\n        \"default\": false\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Benin\",\n        \"code\": \"BEN\",\n        \"alpha2Code\": \"BJ\",\n        \"alpha3Code\": \"BEN\",\n        \"numericCode\": \"204\",\n        \"default\": false\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Bermuda\",\n        \"code\": \"BMU\",\n        \"alpha2Code\": \"BM\",\n        \"alpha3Code\": \"BMU\",\n        \"numericCode\": \"060\",\n        \"default\": false\n    },\n    {\n        \"id\": 33,\n        \"name\": \"Bhutan\",\n        \"code\": \"BTN\",\n        \"alpha2Code\": \"BT\",\n        \"alpha3Code\": \"BTN\",\n        \"numericCode\": \"064\",\n        \"default\": false\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Bolivia\",\n        \"code\": \"BOL\",\n        \"alpha2Code\": \"BO\",\n        \"alpha3Code\": \"BOL\",\n        \"numericCode\": \"068\",\n        \"default\": false\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Bonaire Saint Eustatius and Saba \",\n        \"code\": \"BES\",\n        \"alpha2Code\": \"BQ\",\n        \"alpha3Code\": \"BES\",\n        \"numericCode\": \"535\",\n        \"default\": false\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Bosnia and Herzegovina\",\n        \"code\": \"BIH\",\n        \"alpha2Code\": \"BA\",\n        \"alpha3Code\": \"BIH\",\n        \"numericCode\": \"070\",\n        \"default\": false\n    },\n    {\n        \"id\": 35,\n        \"name\": \"Botswana\",\n        \"code\": \"BWA\",\n        \"alpha2Code\": \"BW\",\n        \"alpha3Code\": \"BWA\",\n        \"numericCode\": \"072\",\n        \"default\": false\n    },\n    {\n        \"id\": 34,\n        \"name\": \"Bouvet Island\",\n        \"code\": \"BVT\",\n        \"alpha2Code\": \"BV\",\n        \"alpha3Code\": \"BVT\",\n        \"numericCode\": \"074\",\n        \"default\": false\n    },\n    {\n        \"id\": 31,\n        \"name\": \"Brazil\",\n        \"code\": \"BRA\",\n        \"alpha2Code\": \"BR\",\n        \"alpha3Code\": \"BRA\",\n        \"numericCode\": \"076\",\n        \"default\": false\n    },\n    {\n        \"id\": 106,\n        \"name\": \"British Indian Ocean Territory\",\n        \"code\": \"IOT\",\n        \"alpha2Code\": \"IO\",\n        \"alpha3Code\": \"IOT\",\n        \"numericCode\": \"086\",\n        \"default\": false\n    },\n    {\n        \"id\": 240,\n        \"name\": \"British Virgin Islands\",\n        \"code\": \"VGB\",\n        \"alpha2Code\": \"VG\",\n        \"alpha3Code\": \"VGB\",\n        \"numericCode\": \"092\",\n        \"default\": false\n    },\n    {\n        \"id\": 28,\n        \"name\": \"Brunei\",\n        \"code\": \"BRN\",\n        \"alpha2Code\": \"BN\",\n        \"alpha3Code\": \"BRN\",\n        \"numericCode\": \"096\",\n        \"default\": false\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Bulgaria\",\n        \"code\": \"BGR\",\n        \"alpha2Code\": \"BG\",\n        \"alpha3Code\": \"BGR\",\n        \"numericCode\": \"100\",\n        \"default\": false\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Burkina Faso\",\n        \"code\": \"BFA\",\n        \"alpha2Code\": \"BF\",\n        \"alpha3Code\": \"BFA\",\n        \"numericCode\": \"854\",\n        \"default\": false\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Burundi\",\n        \"code\": \"BDI\",\n        \"alpha2Code\": \"BI\",\n        \"alpha3Code\": \"BDI\",\n        \"numericCode\": \"108\",\n        \"default\": false\n    },\n    {\n        \"id\": 117,\n        \"name\": \"Cambodia\",\n        \"code\": \"KHM\",\n        \"alpha2Code\": \"KH\",\n        \"alpha3Code\": \"KHM\",\n        \"numericCode\": \"116\",\n        \"default\": false\n    },\n    {\n        \"id\": 47,\n        \"name\": \"Cameroon\",\n        \"code\": \"CMR\",\n        \"alpha2Code\": \"CM\",\n        \"alpha3Code\": \"CMR\",\n        \"numericCode\": \"120\",\n        \"default\": false\n    },\n    {\n        \"id\": 38,\n        \"name\": \"Canada\",\n        \"code\": \"CAN\",\n        \"alpha2Code\": \"CA\",\n        \"alpha3Code\": \"CAN\",\n        \"numericCode\": \"124\",\n        \"default\": false\n    },\n    {\n        \"id\": 52,\n        \"name\": \"Cape Verde\",\n        \"code\": \"CPV\",\n        \"alpha2Code\": \"CV\",\n        \"alpha3Code\": \"CPV\",\n        \"numericCode\": \"132\",\n        \"default\": false\n    },\n    {\n        \"id\": 125,\n        \"name\": \"Cayman Islands\",\n        \"code\": \"CYM\",\n        \"alpha2Code\": \"KY\",\n        \"alpha3Code\": \"CYM\",\n        \"numericCode\": \"136\",\n        \"default\": false\n    },\n    {\n        \"id\": 41,\n        \"name\": \"Central African Republic\",\n        \"code\": \"CAF\",\n        \"alpha2Code\": \"CF\",\n        \"alpha3Code\": \"CAF\",\n        \"numericCode\": \"140\",\n        \"default\": false\n    },\n    {\n        \"id\": 216,\n        \"name\": \"Chad\",\n        \"code\": \"TCD\",\n        \"alpha2Code\": \"TD\",\n        \"alpha3Code\": \"TCD\",\n        \"numericCode\": \"148\",\n        \"default\": false\n    },\n    {\n        \"id\": 46,\n        \"name\": \"Chile\",\n        \"code\": \"CHL\",\n        \"alpha2Code\": \"CL\",\n        \"alpha3Code\": \"CHL\",\n        \"numericCode\": \"152\",\n        \"default\": false\n    },\n    {\n        \"id\": 48,\n        \"name\": \"China\",\n        \"code\": \"CHN\",\n        \"alpha2Code\": \"CN\",\n        \"alpha3Code\": \"CHN\",\n        \"numericCode\": \"156\",\n        \"default\": false\n    },\n    {\n        \"id\": 54,\n        \"name\": \"Christmas Island\",\n        \"code\": \"CXR\",\n        \"alpha2Code\": \"CX\",\n        \"alpha3Code\": \"CXR\",\n        \"numericCode\": \"162\",\n        \"default\": false\n    },\n    {\n        \"id\": 39,\n        \"name\": \"Cocos Islands\",\n        \"code\": \"CCK\",\n        \"alpha2Code\": \"CC\",\n        \"alpha3Code\": \"CCK\",\n        \"numericCode\": \"166\",\n        \"default\": false\n    },\n    {\n        \"id\": 49,\n        \"name\": \"Colombia\",\n        \"code\": \"COL\",\n        \"alpha2Code\": \"CO\",\n        \"alpha3Code\": \"COL\",\n        \"numericCode\": \"170\",\n        \"default\": false\n    },\n    {\n        \"id\": 119,\n        \"name\": \"Comoros\",\n        \"code\": \"COM\",\n        \"alpha2Code\": \"KM\",\n        \"alpha3Code\": \"COM\",\n        \"numericCode\": \"174\",\n        \"default\": false\n    },\n    {\n        \"id\": 45,\n        \"name\": \"Cook Islands\",\n        \"code\": \"COK\",\n        \"alpha2Code\": \"CK\",\n        \"alpha3Code\": \"COK\",\n        \"numericCode\": \"184\",\n        \"default\": false\n    },\n    {\n        \"id\": 50,\n        \"name\": \"Costa Rica\",\n        \"code\": \"CRI\",\n        \"alpha2Code\": \"CR\",\n        \"alpha3Code\": \"CRI\",\n        \"numericCode\": \"188\",\n        \"default\": false\n    },\n    {\n        \"id\": 98,\n        \"name\": \"Croatia\",\n        \"code\": \"HRV\",\n        \"alpha2Code\": \"HR\",\n        \"alpha3Code\": \"HRV\",\n        \"numericCode\": \"191\",\n        \"default\": false\n    },\n    {\n        \"id\": 51,\n        \"name\": \"Cuba\",\n        \"code\": \"CUB\",\n        \"alpha2Code\": \"CU\",\n        \"alpha3Code\": \"CUB\",\n        \"numericCode\": \"192\",\n        \"default\": false\n    },\n    {\n        \"id\": 53,\n        \"name\": \"Curacao\",\n        \"code\": \"CUW\",\n        \"alpha2Code\": \"CW\",\n        \"alpha3Code\": \"CUW\",\n        \"numericCode\": \"531\",\n        \"default\": false\n    },\n    {\n        \"id\": 55,\n        \"name\": \"Cyprus\",\n        \"code\": \"CYP\",\n        \"alpha2Code\": \"CY\",\n        \"alpha3Code\": \"CYP\",\n        \"numericCode\": \"196\",\n        \"default\": false\n    },\n    {\n        \"id\": 56,\n        \"name\": \"Czech Republic\",\n        \"code\": \"CZE\",\n        \"alpha2Code\": \"CZ\",\n        \"alpha3Code\": \"CZE\",\n        \"numericCode\": \"203\",\n        \"default\": false\n    },\n    {\n        \"id\": 40,\n        \"name\": \"Democratic Republic of the Congo\",\n        \"code\": \"COD\",\n        \"alpha2Code\": \"CD\",\n        \"alpha3Code\": \"COD\",\n        \"numericCode\": \"180\",\n        \"default\": false\n    },\n    {\n        \"id\": 59,\n        \"name\": \"Denmark\",\n        \"code\": \"DNK\",\n        \"alpha2Code\": \"DK\",\n        \"alpha3Code\": \"DNK\",\n        \"numericCode\": \"208\",\n        \"default\": false\n    },\n    {\n        \"id\": 58,\n        \"name\": \"Djibouti\",\n        \"code\": \"DJI\",\n        \"alpha2Code\": \"DJ\",\n        \"alpha3Code\": \"DJI\",\n        \"numericCode\": \"262\",\n        \"default\": false\n    },\n    {\n        \"id\": 60,\n        \"name\": \"Dominica\",\n        \"code\": \"DMA\",\n        \"alpha2Code\": \"DM\",\n        \"alpha3Code\": \"DMA\",\n        \"numericCode\": \"212\",\n        \"default\": false\n    },\n    {\n        \"id\": 61,\n        \"name\": \"Dominican Republic\",\n        \"code\": \"DOM\",\n        \"alpha2Code\": \"DO\",\n        \"alpha3Code\": \"DOM\",\n        \"numericCode\": \"214\",\n        \"default\": false\n    },\n    {\n        \"id\": 222,\n        \"name\": \"East Timor\",\n        \"code\": \"TLS\",\n        \"alpha2Code\": \"TL\",\n        \"alpha3Code\": \"TLS\",\n        \"numericCode\": \"626\",\n        \"default\": false\n    },\n    {\n        \"id\": 63,\n        \"name\": \"Ecuador\",\n        \"code\": \"ECU\",\n        \"alpha2Code\": \"EC\",\n        \"alpha3Code\": \"ECU\",\n        \"numericCode\": \"218\",\n        \"default\": false\n    },\n    {\n        \"id\": 65,\n        \"name\": \"Egypt\",\n        \"code\": \"EGY\",\n        \"alpha2Code\": \"EG\",\n        \"alpha3Code\": \"EGY\",\n        \"numericCode\": \"818\",\n        \"default\": false\n    },\n    {\n        \"id\": 211,\n        \"name\": \"El Salvador\",\n        \"code\": \"SLV\",\n        \"alpha2Code\": \"SV\",\n        \"alpha3Code\": \"SLV\",\n        \"numericCode\": \"222\",\n        \"default\": false\n    },\n    {\n        \"id\": 88,\n        \"name\": \"Equatorial Guinea\",\n        \"code\": \"GNQ\",\n        \"alpha2Code\": \"GQ\",\n        \"alpha3Code\": \"GNQ\",\n        \"numericCode\": \"226\",\n        \"default\": false\n    },\n    {\n        \"id\": 67,\n        \"name\": \"Eritrea\",\n        \"code\": \"ERI\",\n        \"alpha2Code\": \"ER\",\n        \"alpha3Code\": \"ERI\",\n        \"numericCode\": \"232\",\n        \"default\": false\n    },\n    {\n        \"id\": 64,\n        \"name\": \"Estonia\",\n        \"code\": \"EST\",\n        \"alpha2Code\": \"EE\",\n        \"alpha3Code\": \"EST\",\n        \"numericCode\": \"233\",\n        \"default\": false\n    },\n    {\n        \"id\": 69,\n        \"name\": \"Ethiopia\",\n        \"code\": \"ETH\",\n        \"alpha2Code\": \"ET\",\n        \"alpha3Code\": \"ETH\",\n        \"numericCode\": \"231\",\n        \"default\": false\n    },\n    {\n        \"id\": 72,\n        \"name\": \"Falkland Islands\",\n        \"code\": \"FLK\",\n        \"alpha2Code\": \"FK\",\n        \"alpha3Code\": \"FLK\",\n        \"numericCode\": \"238\",\n        \"default\": false\n    },\n    {\n        \"id\": 74,\n        \"name\": \"Faroe Islands\",\n        \"code\": \"FRO\",\n        \"alpha2Code\": \"FO\",\n        \"alpha3Code\": \"FRO\",\n        \"numericCode\": \"234\",\n        \"default\": false\n    },\n    {\n        \"id\": 71,\n        \"name\": \"Fiji\",\n        \"code\": \"FJI\",\n        \"alpha2Code\": \"FJ\",\n        \"alpha3Code\": \"FJI\",\n        \"numericCode\": \"242\",\n        \"default\": false\n    },\n    {\n        \"id\": 70,\n        \"name\": \"Finland\",\n        \"code\": \"FIN\",\n        \"alpha2Code\": \"FI\",\n        \"alpha3Code\": \"FIN\",\n        \"numericCode\": \"246\",\n        \"default\": false\n    },\n    {\n        \"id\": 75,\n        \"name\": \"France\",\n        \"code\": \"FRA\",\n        \"alpha2Code\": \"FR\",\n        \"alpha3Code\": \"FRA\",\n        \"numericCode\": \"250\",\n        \"default\": false\n    },\n    {\n        \"id\": 80,\n        \"name\": \"French Guiana\",\n        \"code\": \"GUF\",\n        \"alpha2Code\": \"GF\",\n        \"alpha3Code\": \"GUF\",\n        \"numericCode\": \"254\",\n        \"default\": false\n    },\n    {\n        \"id\": 176,\n        \"name\": \"French Polynesia\",\n        \"code\": \"PYF\",\n        \"alpha2Code\": \"PF\",\n        \"alpha3Code\": \"PYF\",\n        \"numericCode\": \"258\",\n        \"default\": false\n    },\n    {\n        \"id\": 217,\n        \"name\": \"French Southern Territories\",\n        \"code\": \"ATF\",\n        \"alpha2Code\": \"TF\",\n        \"alpha3Code\": \"ATF\",\n        \"numericCode\": \"260\",\n        \"default\": false\n    },\n    {\n        \"id\": 76,\n        \"name\": \"Gabon\",\n        \"code\": \"GAB\",\n        \"alpha2Code\": \"GA\",\n        \"alpha3Code\": \"GAB\",\n        \"numericCode\": \"266\",\n        \"default\": false\n    },\n    {\n        \"id\": 85,\n        \"name\": \"Gambia\",\n        \"code\": \"GMB\",\n        \"alpha2Code\": \"GM\",\n        \"alpha3Code\": \"GMB\",\n        \"numericCode\": \"270\",\n        \"default\": false\n    },\n    {\n        \"id\": 79,\n        \"name\": \"Georgia\",\n        \"code\": \"GEO\",\n        \"alpha2Code\": \"GE\",\n        \"alpha3Code\": \"GEO\",\n        \"numericCode\": \"268\",\n        \"default\": false\n    },\n    {\n        \"id\": 57,\n        \"name\": \"Germany\",\n        \"code\": \"DEU\",\n        \"alpha2Code\": \"DE\",\n        \"alpha3Code\": \"DEU\",\n        \"numericCode\": \"276\",\n        \"default\": false\n    },\n    {\n        \"id\": 82,\n        \"name\": \"Ghana\",\n        \"code\": \"GHA\",\n        \"alpha2Code\": \"GH\",\n        \"alpha3Code\": \"GHA\",\n        \"numericCode\": \"288\",\n        \"default\": false\n    },\n    {\n        \"id\": 83,\n        \"name\": \"Gibraltar\",\n        \"code\": \"GIB\",\n        \"alpha2Code\": \"GI\",\n        \"alpha3Code\": \"GIB\",\n        \"numericCode\": \"292\",\n        \"default\": false\n    },\n    {\n        \"id\": 89,\n        \"name\": \"Greece\",\n        \"code\": \"GRC\",\n        \"alpha2Code\": \"GR\",\n        \"alpha3Code\": \"GRC\",\n        \"numericCode\": \"300\",\n        \"default\": false\n    },\n    {\n        \"id\": 84,\n        \"name\": \"Greenland\",\n        \"code\": \"GRL\",\n        \"alpha2Code\": \"GL\",\n        \"alpha3Code\": \"GRL\",\n        \"numericCode\": \"304\",\n        \"default\": false\n    },\n    {\n        \"id\": 78,\n        \"name\": \"Grenada\",\n        \"code\": \"GRD\",\n        \"alpha2Code\": \"GD\",\n        \"alpha3Code\": \"GRD\",\n        \"numericCode\": \"308\",\n        \"default\": false\n    },\n    {\n        \"id\": 87,\n        \"name\": \"Guadeloupe\",\n        \"code\": \"GLP\",\n        \"alpha2Code\": \"GP\",\n        \"alpha3Code\": \"GLP\",\n        \"numericCode\": \"312\",\n        \"default\": false\n    },\n    {\n        \"id\": 92,\n        \"name\": \"Guam\",\n        \"code\": \"GUM\",\n        \"alpha2Code\": \"GU\",\n        \"alpha3Code\": \"GUM\",\n        \"numericCode\": \"316\",\n        \"default\": false\n    },\n    {\n        \"id\": 91,\n        \"name\": \"Guatemala\",\n        \"code\": \"GTM\",\n        \"alpha2Code\": \"GT\",\n        \"alpha3Code\": \"GTM\",\n        \"numericCode\": \"320\",\n        \"default\": false\n    },\n    {\n        \"id\": 81,\n        \"name\": \"Guernsey\",\n        \"code\": \"GGY\",\n        \"alpha2Code\": \"GG\",\n        \"alpha3Code\": \"GGY\",\n        \"numericCode\": \"831\",\n        \"default\": false\n    },\n    {\n        \"id\": 86,\n        \"name\": \"Guinea\",\n        \"code\": \"GIN\",\n        \"alpha2Code\": \"GN\",\n        \"alpha3Code\": \"GIN\",\n        \"numericCode\": \"324\",\n        \"default\": false\n    },\n    {\n        \"id\": 93,\n        \"name\": \"Guinea-Bissau\",\n        \"code\": \"GNB\",\n        \"alpha2Code\": \"GW\",\n        \"alpha3Code\": \"GNB\",\n        \"numericCode\": \"624\",\n        \"default\": false\n    },\n    {\n        \"id\": 94,\n        \"name\": \"Guyana\",\n        \"code\": \"GUY\",\n        \"alpha2Code\": \"GY\",\n        \"alpha3Code\": \"GUY\",\n        \"numericCode\": \"328\",\n        \"default\": false\n    },\n    {\n        \"id\": 99,\n        \"name\": \"Haiti\",\n        \"code\": \"HTI\",\n        \"alpha2Code\": \"HT\",\n        \"alpha3Code\": \"HTI\",\n        \"numericCode\": \"332\",\n        \"default\": false\n    },\n    {\n        \"id\": 96,\n        \"name\": \"Heard Island and McDonald Islands\",\n        \"code\": \"HMD\",\n        \"alpha2Code\": \"HM\",\n        \"alpha3Code\": \"HMD\",\n        \"numericCode\": \"334\",\n        \"default\": false\n    },\n    {\n        \"id\": 97,\n        \"name\": \"Honduras\",\n        \"code\": \"HND\",\n        \"alpha2Code\": \"HN\",\n        \"alpha3Code\": \"HND\",\n        \"numericCode\": \"340\",\n        \"default\": false\n    },\n    {\n        \"id\": 95,\n        \"name\": \"Hong Kong\",\n        \"code\": \"HKG\",\n        \"alpha2Code\": \"HK\",\n        \"alpha3Code\": \"HKG\",\n        \"numericCode\": \"344\",\n        \"default\": false\n    },\n    {\n        \"id\": 100,\n        \"name\": \"Hungary\",\n        \"code\": \"HUN\",\n        \"alpha2Code\": \"HU\",\n        \"alpha3Code\": \"HUN\",\n        \"numericCode\": \"348\",\n        \"default\": false\n    },\n    {\n        \"id\": 109,\n        \"name\": \"Iceland\",\n        \"code\": \"ISL\",\n        \"alpha2Code\": \"IS\",\n        \"alpha3Code\": \"ISL\",\n        \"numericCode\": \"352\",\n        \"default\": false\n    },\n    {\n        \"id\": 1,\n        \"name\": \"India\",\n        \"code\": \"IND\",\n        \"alpha2Code\": \"IN\",\n        \"alpha3Code\": \"IND\",\n        \"numericCode\": \"356\",\n        \"default\": false\n    },\n    {\n        \"id\": 101,\n        \"name\": \"Indonesia\",\n        \"code\": \"IDN\",\n        \"alpha2Code\": \"ID\",\n        \"alpha3Code\": \"IDN\",\n        \"numericCode\": \"360\",\n        \"default\": false\n    },\n    {\n        \"id\": 108,\n        \"name\": \"Iran\",\n        \"code\": \"IRN\",\n        \"alpha2Code\": \"IR\",\n        \"alpha3Code\": \"IRN\",\n        \"numericCode\": \"364\",\n        \"default\": false\n    },\n    {\n        \"id\": 107,\n        \"name\": \"Iraq\",\n        \"code\": \"IRQ\",\n        \"alpha2Code\": \"IQ\",\n        \"alpha3Code\": \"IRQ\",\n        \"numericCode\": \"368\",\n        \"default\": false\n    },\n    {\n        \"id\": 102,\n        \"name\": \"Ireland\",\n        \"code\": \"IRL\",\n        \"alpha2Code\": \"IE\",\n        \"alpha3Code\": \"IRL\",\n        \"numericCode\": \"372\",\n        \"default\": false\n    },\n    {\n        \"id\": 104,\n        \"name\": \"Isle of Man\",\n        \"code\": \"IMN\",\n        \"alpha2Code\": \"IM\",\n        \"alpha3Code\": \"IMN\",\n        \"numericCode\": \"833\",\n        \"default\": false\n    },\n    {\n        \"id\": 103,\n        \"name\": \"Israel\",\n        \"code\": \"ISR\",\n        \"alpha2Code\": \"IL\",\n        \"alpha3Code\": \"ISR\",\n        \"numericCode\": \"376\",\n        \"default\": false\n    },\n    {\n        \"id\": 110,\n        \"name\": \"Italy\",\n        \"code\": \"ITA\",\n        \"alpha2Code\": \"IT\",\n        \"alpha3Code\": \"ITA\",\n        \"numericCode\": \"380\",\n        \"default\": false\n    },\n    {\n        \"id\": 44,\n        \"name\": \"Ivory Coast\",\n        \"code\": \"CIV\",\n        \"alpha2Code\": \"CI\",\n        \"alpha3Code\": \"CIV\",\n        \"numericCode\": \"384\",\n        \"default\": false\n    },\n    {\n        \"id\": 112,\n        \"name\": \"Jamaica\",\n        \"code\": \"JAM\",\n        \"alpha2Code\": \"JM\",\n        \"alpha3Code\": \"JAM\",\n        \"numericCode\": \"388\",\n        \"default\": false\n    },\n    {\n        \"id\": 114,\n        \"name\": \"Japan\",\n        \"code\": \"JPN\",\n        \"alpha2Code\": \"JP\",\n        \"alpha3Code\": \"JPN\",\n        \"numericCode\": \"392\",\n        \"default\": false\n    },\n    {\n        \"id\": 111,\n        \"name\": \"Jersey\",\n        \"code\": \"JEY\",\n        \"alpha2Code\": \"JE\",\n        \"alpha3Code\": \"JEY\",\n        \"numericCode\": \"832\",\n        \"default\": false\n    },\n    {\n        \"id\": 113,\n        \"name\": \"Jordan\",\n        \"code\": \"JOR\",\n        \"alpha2Code\": \"JO\",\n        \"alpha3Code\": \"JOR\",\n        \"numericCode\": \"400\",\n        \"default\": false\n    },\n    {\n        \"id\": 126,\n        \"name\": \"Kazakhstan\",\n        \"code\": \"KAZ\",\n        \"alpha2Code\": \"KZ\",\n        \"alpha3Code\": \"KAZ\",\n        \"numericCode\": \"398\",\n        \"default\": false\n    },\n    {\n        \"id\": 115,\n        \"name\": \"Kenya\",\n        \"code\": \"KEN\",\n        \"alpha2Code\": \"KE\",\n        \"alpha3Code\": \"KEN\",\n        \"numericCode\": \"404\",\n        \"default\": false\n    },\n    {\n        \"id\": 118,\n        \"name\": \"Kiribati\",\n        \"code\": \"KIR\",\n        \"alpha2Code\": \"KI\",\n        \"alpha3Code\": \"KIR\",\n        \"numericCode\": \"296\",\n        \"default\": false\n    },\n    {\n        \"id\": 123,\n        \"name\": \"Kosovo\",\n        \"code\": \"RKS\",\n        \"alpha2Code\": \"XK\",\n        \"alpha3Code\": \"RKS\",\n        \"numericCode\": \"383\",\n        \"default\": false\n    },\n    {\n        \"id\": 124,\n        \"name\": \"Kuwait\",\n        \"code\": \"KWT\",\n        \"alpha2Code\": \"KW\",\n        \"alpha3Code\": \"KWT\",\n        \"numericCode\": \"414\",\n        \"default\": false\n    },\n    {\n        \"id\": 116,\n        \"name\": \"Kyrgyzstan\",\n        \"code\": \"KGZ\",\n        \"alpha2Code\": \"KG\",\n        \"alpha3Code\": \"KGZ\",\n        \"numericCode\": \"417\",\n        \"default\": false\n    },\n    {\n        \"id\": 127,\n        \"name\": \"Laos\",\n        \"code\": \"LAO\",\n        \"alpha2Code\": \"LA\",\n        \"alpha3Code\": \"LAO\",\n        \"numericCode\": \"418\",\n        \"default\": false\n    },\n    {\n        \"id\": 136,\n        \"name\": \"Latvia\",\n        \"code\": \"LVA\",\n        \"alpha2Code\": \"LV\",\n        \"alpha3Code\": \"LVA\",\n        \"numericCode\": \"428\",\n        \"default\": false\n    },\n    {\n        \"id\": 128,\n        \"name\": \"Lebanon\",\n        \"code\": \"LBN\",\n        \"alpha2Code\": \"LB\",\n        \"alpha3Code\": \"LBN\",\n        \"numericCode\": \"422\",\n        \"default\": false\n    },\n    {\n        \"id\": 133,\n        \"name\": \"Lesotho\",\n        \"code\": \"LSO\",\n        \"alpha2Code\": \"LS\",\n        \"alpha3Code\": \"LSO\",\n        \"numericCode\": \"426\",\n        \"default\": false\n    },\n    {\n        \"id\": 132,\n        \"name\": \"Liberia\",\n        \"code\": \"LBR\",\n        \"alpha2Code\": \"LR\",\n        \"alpha3Code\": \"LBR\",\n        \"numericCode\": \"430\",\n        \"default\": false\n    },\n    {\n        \"id\": 137,\n        \"name\": \"Libya\",\n        \"code\": \"LBY\",\n        \"alpha2Code\": \"LY\",\n        \"alpha3Code\": \"LBY\",\n        \"numericCode\": \"434\",\n        \"default\": false\n    },\n    {\n        \"id\": 130,\n        \"name\": \"Liechtenstein\",\n        \"code\": \"LIE\",\n        \"alpha2Code\": \"LI\",\n        \"alpha3Code\": \"LIE\",\n        \"numericCode\": \"438\",\n        \"default\": false\n    },\n    {\n        \"id\": 134,\n        \"name\": \"Lithuania\",\n        \"code\": \"LTU\",\n        \"alpha2Code\": \"LT\",\n        \"alpha3Code\": \"LTU\",\n        \"numericCode\": \"440\",\n        \"default\": false\n    },\n    {\n        \"id\": 135,\n        \"name\": \"Luxembourg\",\n        \"code\": \"LUX\",\n        \"alpha2Code\": \"LU\",\n        \"alpha3Code\": \"LUX\",\n        \"numericCode\": \"442\",\n        \"default\": false\n    },\n    {\n        \"id\": 149,\n        \"name\": \"Macao\",\n        \"code\": \"MAC\",\n        \"alpha2Code\": \"MO\",\n        \"alpha3Code\": \"MAC\",\n        \"numericCode\": \"446\",\n        \"default\": false\n    },\n    {\n        \"id\": 143,\n        \"name\": \"Madagascar\",\n        \"code\": \"MDG\",\n        \"alpha2Code\": \"MG\",\n        \"alpha3Code\": \"MDG\",\n        \"numericCode\": \"450\",\n        \"default\": false\n    },\n    {\n        \"id\": 157,\n        \"name\": \"Malawi\",\n        \"code\": \"MWI\",\n        \"alpha2Code\": \"MW\",\n        \"alpha3Code\": \"MWI\",\n        \"numericCode\": \"454\",\n        \"default\": false\n    },\n    {\n        \"id\": 159,\n        \"name\": \"Malaysia\",\n        \"code\": \"MYS\",\n        \"alpha2Code\": \"MY\",\n        \"alpha3Code\": \"MYS\",\n        \"numericCode\": \"458\",\n        \"default\": false\n    },\n    {\n        \"id\": 156,\n        \"name\": \"Maldives\",\n        \"code\": \"MDV\",\n        \"alpha2Code\": \"MV\",\n        \"alpha3Code\": \"MDV\",\n        \"numericCode\": \"462\",\n        \"default\": false\n    },\n    {\n        \"id\": 146,\n        \"name\": \"Mali\",\n        \"code\": \"MLI\",\n        \"alpha2Code\": \"ML\",\n        \"alpha3Code\": \"MLI\",\n        \"numericCode\": \"466\",\n        \"default\": false\n    },\n    {\n        \"id\": 154,\n        \"name\": \"Malta\",\n        \"code\": \"MLT\",\n        \"alpha2Code\": \"MT\",\n        \"alpha3Code\": \"MLT\",\n        \"numericCode\": \"470\",\n        \"default\": false\n    },\n    {\n        \"id\": 144,\n        \"name\": \"Marshall Islands\",\n        \"code\": \"MHL\",\n        \"alpha2Code\": \"MH\",\n        \"alpha3Code\": \"MHL\",\n        \"numericCode\": \"584\",\n        \"default\": false\n    },\n    {\n        \"id\": 151,\n        \"name\": \"Martinique\",\n        \"code\": \"MTQ\",\n        \"alpha2Code\": \"MQ\",\n        \"alpha3Code\": \"MTQ\",\n        \"numericCode\": \"474\",\n        \"default\": false\n    },\n    {\n        \"id\": 152,\n        \"name\": \"Mauritania\",\n        \"code\": \"MRT\",\n        \"alpha2Code\": \"MR\",\n        \"alpha3Code\": \"MRT\",\n        \"numericCode\": \"478\",\n        \"default\": false\n    },\n    {\n        \"id\": 155,\n        \"name\": \"Mauritius\",\n        \"code\": \"MUS\",\n        \"alpha2Code\": \"MU\",\n        \"alpha3Code\": \"MUS\",\n        \"numericCode\": \"480\",\n        \"default\": false\n    },\n    {\n        \"id\": 247,\n        \"name\": \"Mayotte\",\n        \"code\": \"MYT\",\n        \"alpha2Code\": \"YT\",\n        \"alpha3Code\": \"MYT\",\n        \"numericCode\": \"175\",\n        \"default\": false\n    },\n    {\n        \"id\": 158,\n        \"name\": \"Mexico\",\n        \"code\": \"MEX\",\n        \"alpha2Code\": \"MX\",\n        \"alpha3Code\": \"MEX\",\n        \"numericCode\": \"484\",\n        \"default\": false\n    },\n    {\n        \"id\": 73,\n        \"name\": \"Micronesia\",\n        \"code\": \"FSM\",\n        \"alpha2Code\": \"FM\",\n        \"alpha3Code\": \"FSM\",\n        \"numericCode\": \"583\",\n        \"default\": false\n    },\n    {\n        \"id\": 140,\n        \"name\": \"Moldova\",\n        \"code\": \"MDA\",\n        \"alpha2Code\": \"MD\",\n        \"alpha3Code\": \"MDA\",\n        \"numericCode\": \"498\",\n        \"default\": false\n    },\n    {\n        \"id\": 139,\n        \"name\": \"Monaco\",\n        \"code\": \"MCO\",\n        \"alpha2Code\": \"MC\",\n        \"alpha3Code\": \"MCO\",\n        \"numericCode\": \"492\",\n        \"default\": false\n    },\n    {\n        \"id\": 148,\n        \"name\": \"Mongolia\",\n        \"code\": \"MNG\",\n        \"alpha2Code\": \"MN\",\n        \"alpha3Code\": \"MNG\",\n        \"numericCode\": \"496\",\n        \"default\": false\n    },\n    {\n        \"id\": 141,\n        \"name\": \"Montenegro\",\n        \"code\": \"MNE\",\n        \"alpha2Code\": \"ME\",\n        \"alpha3Code\": \"MNE\",\n        \"numericCode\": \"499\",\n        \"default\": false\n    },\n    {\n        \"id\": 153,\n        \"name\": \"Montserrat\",\n        \"code\": \"MSR\",\n        \"alpha2Code\": \"MS\",\n        \"alpha3Code\": \"MSR\",\n        \"numericCode\": \"500\",\n        \"default\": false\n    },\n    {\n        \"id\": 138,\n        \"name\": \"Morocco\",\n        \"code\": \"MAR\",\n        \"alpha2Code\": \"MA\",\n        \"alpha3Code\": \"MAR\",\n        \"numericCode\": \"504\",\n        \"default\": false\n    },\n    {\n        \"id\": 160,\n        \"name\": \"Mozambique\",\n        \"code\": \"MOZ\",\n        \"alpha2Code\": \"MZ\",\n        \"alpha3Code\": \"MOZ\",\n        \"numericCode\": \"508\",\n        \"default\": false\n    },\n    {\n        \"id\": 147,\n        \"name\": \"Myanmar\",\n        \"code\": \"MMR\",\n        \"alpha2Code\": \"MM\",\n        \"alpha3Code\": \"MMR\",\n        \"numericCode\": \"104\",\n        \"default\": false\n    },\n    {\n        \"id\": 161,\n        \"name\": \"Namibia\",\n        \"code\": \"NAM\",\n        \"alpha2Code\": \"NA\",\n        \"alpha3Code\": \"NAM\",\n        \"numericCode\": \"516\",\n        \"default\": false\n    },\n    {\n        \"id\": 170,\n        \"name\": \"Nauru\",\n        \"code\": \"NRU\",\n        \"alpha2Code\": \"NR\",\n        \"alpha3Code\": \"NRU\",\n        \"numericCode\": \"520\",\n        \"default\": false\n    },\n    {\n        \"id\": 169,\n        \"name\": \"Nepal\",\n        \"code\": \"NPL\",\n        \"alpha2Code\": \"NP\",\n        \"alpha3Code\": \"NPL\",\n        \"numericCode\": \"524\",\n        \"default\": false\n    },\n    {\n        \"id\": 167,\n        \"name\": \"Netherlands\",\n        \"code\": \"NLD\",\n        \"alpha2Code\": \"NL\",\n        \"alpha3Code\": \"NLD\",\n        \"numericCode\": \"528\",\n        \"default\": false\n    },\n    {\n        \"id\": 252,\n        \"name\": \"Netherlands Antilles\",\n        \"code\": \"ANT\",\n        \"alpha2Code\": \"AN\",\n        \"alpha3Code\": \"ANT\",\n        \"numericCode\": \"530\",\n        \"default\": false\n    },\n    {\n        \"id\": 162,\n        \"name\": \"New Caledonia\",\n        \"code\": \"NCL\",\n        \"alpha2Code\": \"NC\",\n        \"alpha3Code\": \"NCL\",\n        \"numericCode\": \"540\",\n        \"default\": false\n    },\n    {\n        \"id\": 172,\n        \"name\": \"New Zealand\",\n        \"code\": \"NZL\",\n        \"alpha2Code\": \"NZ\",\n        \"alpha3Code\": \"NZL\",\n        \"numericCode\": \"554\",\n        \"default\": false\n    },\n    {\n        \"id\": 166,\n        \"name\": \"Nicaragua\",\n        \"code\": \"NIC\",\n        \"alpha2Code\": \"NI\",\n        \"alpha3Code\": \"NIC\",\n        \"numericCode\": \"558\",\n        \"default\": false\n    },\n    {\n        \"id\": 163,\n        \"name\": \"Niger\",\n        \"code\": \"NER\",\n        \"alpha2Code\": \"NE\",\n        \"alpha3Code\": \"NER\",\n        \"numericCode\": \"562\",\n        \"default\": false\n    },\n    {\n        \"id\": 165,\n        \"name\": \"Nigeria\",\n        \"code\": \"NGA\",\n        \"alpha2Code\": \"NG\",\n        \"alpha3Code\": \"NGA\",\n        \"numericCode\": \"566\",\n        \"default\": false\n    },\n    {\n        \"id\": 171,\n        \"name\": \"Niue\",\n        \"code\": \"NIU\",\n        \"alpha2Code\": \"NU\",\n        \"alpha3Code\": \"NIU\",\n        \"numericCode\": \"570\",\n        \"default\": false\n    },\n    {\n        \"id\": 164,\n        \"name\": \"Norfolk Island\",\n        \"code\": \"NFK\",\n        \"alpha2Code\": \"NF\",\n        \"alpha3Code\": \"NFK\",\n        \"numericCode\": \"574\",\n        \"default\": false\n    },\n    {\n        \"id\": 121,\n        \"name\": \"North Korea\",\n        \"code\": \"PRK\",\n        \"alpha2Code\": \"KP\",\n        \"alpha3Code\": \"PRK\",\n        \"numericCode\": \"408\",\n        \"default\": false\n    },\n    {\n        \"id\": 145,\n        \"name\": \"North Macedonia\",\n        \"code\": \"MKD\",\n        \"alpha2Code\": \"MK\",\n        \"alpha3Code\": \"MKD\",\n        \"numericCode\": \"807\",\n        \"default\": false\n    },\n    {\n        \"id\": 150,\n        \"name\": \"Northern Mariana Islands\",\n        \"code\": \"MNP\",\n        \"alpha2Code\": \"MP\",\n        \"alpha3Code\": \"MNP\",\n        \"numericCode\": \"580\",\n        \"default\": false\n    },\n    {\n        \"id\": 168,\n        \"name\": \"Norway\",\n        \"code\": \"NOR\",\n        \"alpha2Code\": \"NO\",\n        \"alpha3Code\": \"NOR\",\n        \"numericCode\": \"578\",\n        \"default\": false\n    },\n    {\n        \"id\": 173,\n        \"name\": \"Oman\",\n        \"code\": \"OMN\",\n        \"alpha2Code\": \"OM\",\n        \"alpha3Code\": \"OMN\",\n        \"numericCode\": \"512\",\n        \"default\": false\n    },\n    {\n        \"id\": 179,\n        \"name\": \"Pakistan\",\n        \"code\": \"PAK\",\n        \"alpha2Code\": \"PK\",\n        \"alpha3Code\": \"PAK\",\n        \"numericCode\": \"586\",\n        \"default\": false\n    },\n    {\n        \"id\": 186,\n        \"name\": \"Palau\",\n        \"code\": \"PLW\",\n        \"alpha2Code\": \"PW\",\n        \"alpha3Code\": \"PLW\",\n        \"numericCode\": \"585\",\n        \"default\": false\n    },\n    {\n        \"id\": 184,\n        \"name\": \"Palestinian Territory\",\n        \"code\": \"PSE\",\n        \"alpha2Code\": \"PS\",\n        \"alpha3Code\": \"PSE\",\n        \"numericCode\": \"275\",\n        \"default\": false\n    },\n    {\n        \"id\": 174,\n        \"name\": \"Panama\",\n        \"code\": \"PAN\",\n        \"alpha2Code\": \"PA\",\n        \"alpha3Code\": \"PAN\",\n        \"numericCode\": \"591\",\n        \"default\": false\n    },\n    {\n        \"id\": 177,\n        \"name\": \"Papua New Guinea\",\n        \"code\": \"PNG\",\n        \"alpha2Code\": \"PG\",\n        \"alpha3Code\": \"PNG\",\n        \"numericCode\": \"598\",\n        \"default\": false\n    },\n    {\n        \"id\": 187,\n        \"name\": \"Paraguay\",\n        \"code\": \"PRY\",\n        \"alpha2Code\": \"PY\",\n        \"alpha3Code\": \"PRY\",\n        \"numericCode\": \"600\",\n        \"default\": false\n    },\n    {\n        \"id\": 175,\n        \"name\": \"Peru\",\n        \"code\": \"PER\",\n        \"alpha2Code\": \"PE\",\n        \"alpha3Code\": \"PER\",\n        \"numericCode\": \"604\",\n        \"default\": false\n    },\n    {\n        \"id\": 178,\n        \"name\": \"Philippines\",\n        \"code\": \"PHL\",\n        \"alpha2Code\": \"PH\",\n        \"alpha3Code\": \"PHL\",\n        \"numericCode\": \"608\",\n        \"default\": false\n    },\n    {\n        \"id\": 182,\n        \"name\": \"Pitcairn\",\n        \"code\": \"PCN\",\n        \"alpha2Code\": \"PN\",\n        \"alpha3Code\": \"PCN\",\n        \"numericCode\": \"612\",\n        \"default\": false\n    },\n    {\n        \"id\": 180,\n        \"name\": \"Poland\",\n        \"code\": \"POL\",\n        \"alpha2Code\": \"PL\",\n        \"alpha3Code\": \"POL\",\n        \"numericCode\": \"616\",\n        \"default\": false\n    },\n    {\n        \"id\": 185,\n        \"name\": \"Portugal\",\n        \"code\": \"PRT\",\n        \"alpha2Code\": \"PT\",\n        \"alpha3Code\": \"PRT\",\n        \"numericCode\": \"620\",\n        \"default\": false\n    },\n    {\n        \"id\": 183,\n        \"name\": \"Puerto Rico\",\n        \"code\": \"PRI\",\n        \"alpha2Code\": \"PR\",\n        \"alpha3Code\": \"PRI\",\n        \"numericCode\": \"630\",\n        \"default\": false\n    },\n    {\n        \"id\": 188,\n        \"name\": \"Qatar\",\n        \"code\": \"QAT\",\n        \"alpha2Code\": \"QA\",\n        \"alpha3Code\": \"QAT\",\n        \"numericCode\": \"634\",\n        \"default\": false\n    },\n    {\n        \"id\": 42,\n        \"name\": \"Republic of the Congo\",\n        \"code\": \"COG\",\n        \"alpha2Code\": \"CG\",\n        \"alpha3Code\": \"COG\",\n        \"numericCode\": \"178\",\n        \"default\": false\n    },\n    {\n        \"id\": 189,\n        \"name\": \"Reunion\",\n        \"code\": \"REU\",\n        \"alpha2Code\": \"RE\",\n        \"alpha3Code\": \"REU\",\n        \"numericCode\": \"638\",\n        \"default\": false\n    },\n    {\n        \"id\": 190,\n        \"name\": \"Romania\",\n        \"code\": \"ROU\",\n        \"alpha2Code\": \"RO\",\n        \"alpha3Code\": \"ROU\",\n        \"numericCode\": \"642\",\n        \"default\": false\n    },\n    {\n        \"id\": 192,\n        \"name\": \"Russia\",\n        \"code\": \"RUS\",\n        \"alpha2Code\": \"RU\",\n        \"alpha3Code\": \"RUS\",\n        \"numericCode\": \"643\",\n        \"default\": false\n    },\n    {\n        \"id\": 193,\n        \"name\": \"Rwanda\",\n        \"code\": \"RWA\",\n        \"alpha2Code\": \"RW\",\n        \"alpha3Code\": \"RWA\",\n        \"numericCode\": \"646\",\n        \"default\": false\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Saint Barthelemy\",\n        \"code\": \"BLM\",\n        \"alpha2Code\": \"BL\",\n        \"alpha3Code\": \"BLM\",\n        \"numericCode\": \"652\",\n        \"default\": false\n    },\n    {\n        \"id\": 201,\n        \"name\": \"Saint Helena\",\n        \"code\": \"SHN\",\n        \"alpha2Code\": \"SH\",\n        \"alpha3Code\": \"SHN\",\n        \"numericCode\": \"654\",\n        \"default\": false\n    },\n    {\n        \"id\": 120,\n        \"name\": \"Saint Kitts and Nevis\",\n        \"code\": \"KNA\",\n        \"alpha2Code\": \"KN\",\n        \"alpha3Code\": \"KNA\",\n        \"numericCode\": \"659\",\n        \"default\": false\n    },\n    {\n        \"id\": 129,\n        \"name\": \"Saint Lucia\",\n        \"code\": \"LCA\",\n        \"alpha2Code\": \"LC\",\n        \"alpha3Code\": \"LCA\",\n        \"numericCode\": \"662\",\n        \"default\": false\n    },\n    {\n        \"id\": 142,\n        \"name\": \"Saint Martin\",\n        \"code\": \"MAF\",\n        \"alpha2Code\": \"MF\",\n        \"alpha3Code\": \"MAF\",\n        \"numericCode\": \"663\",\n        \"default\": false\n    },\n    {\n        \"id\": 181,\n        \"name\": \"Saint Pierre and Miquelon\",\n        \"code\": \"SPM\",\n        \"alpha2Code\": \"PM\",\n        \"alpha3Code\": \"SPM\",\n        \"numericCode\": \"666\",\n        \"default\": false\n    },\n    {\n        \"id\": 238,\n        \"name\": \"Saint Vincent and the Grenadines\",\n        \"code\": \"VCT\",\n        \"alpha2Code\": \"VC\",\n        \"alpha3Code\": \"VCT\",\n        \"numericCode\": \"670\",\n        \"default\": false\n    },\n    {\n        \"id\": 245,\n        \"name\": \"Samoa\",\n        \"code\": \"WSM\",\n        \"alpha2Code\": \"WS\",\n        \"alpha3Code\": \"WSM\",\n        \"numericCode\": \"882\",\n        \"default\": false\n    },\n    {\n        \"id\": 206,\n        \"name\": \"San Marino\",\n        \"code\": \"SMR\",\n        \"alpha2Code\": \"SM\",\n        \"alpha3Code\": \"SMR\",\n        \"numericCode\": \"674\",\n        \"default\": false\n    },\n    {\n        \"id\": 210,\n        \"name\": \"Sao Tome and Principe\",\n        \"code\": \"STP\",\n        \"alpha2Code\": \"ST\",\n        \"alpha3Code\": \"STP\",\n        \"numericCode\": \"678\",\n        \"default\": false\n    },\n    {\n        \"id\": 194,\n        \"name\": \"Saudi Arabia\",\n        \"code\": \"SAU\",\n        \"alpha2Code\": \"SA\",\n        \"alpha3Code\": \"SAU\",\n        \"numericCode\": \"682\",\n        \"default\": false\n    },\n    {\n        \"id\": 207,\n        \"name\": \"Senegal\",\n        \"code\": \"SEN\",\n        \"alpha2Code\": \"SN\",\n        \"alpha3Code\": \"SEN\",\n        \"numericCode\": \"686\",\n        \"default\": false\n    },\n    {\n        \"id\": 191,\n        \"name\": \"Serbia\",\n        \"code\": \"SRB\",\n        \"alpha2Code\": \"RS\",\n        \"alpha3Code\": \"SRB\",\n        \"numericCode\": \"688\",\n        \"default\": false\n    },\n    {\n        \"id\": 251,\n        \"name\": \"Serbia and Montenegro\",\n        \"code\": \"SCG\",\n        \"alpha2Code\": \"CS\",\n        \"alpha3Code\": \"SCG\",\n        \"numericCode\": \"891\",\n        \"default\": false\n    },\n    {\n        \"id\": 196,\n        \"name\": \"Seychelles\",\n        \"code\": \"SYC\",\n        \"alpha2Code\": \"SC\",\n        \"alpha3Code\": \"SYC\",\n        \"numericCode\": \"690\",\n        \"default\": false\n    },\n    {\n        \"id\": 205,\n        \"name\": \"Sierra Leone\",\n        \"code\": \"SLE\",\n        \"alpha2Code\": \"SL\",\n        \"alpha3Code\": \"SLE\",\n        \"numericCode\": \"694\",\n        \"default\": false\n    },\n    {\n        \"id\": 200,\n        \"name\": \"Singapore\",\n        \"code\": \"SGP\",\n        \"alpha2Code\": \"SG\",\n        \"alpha3Code\": \"SGP\",\n        \"numericCode\": \"702\",\n        \"default\": false\n    },\n    {\n        \"id\": 212,\n        \"name\": \"Sint Maarten\",\n        \"code\": \"SXM\",\n        \"alpha2Code\": \"SX\",\n        \"alpha3Code\": \"SXM\",\n        \"numericCode\": \"534\",\n        \"default\": false\n    },\n    {\n        \"id\": 204,\n        \"name\": \"Slovakia\",\n        \"code\": \"SVK\",\n        \"alpha2Code\": \"SK\",\n        \"alpha3Code\": \"SVK\",\n        \"numericCode\": \"703\",\n        \"default\": false\n    },\n    {\n        \"id\": 202,\n        \"name\": \"Slovenia\",\n        \"code\": \"SVN\",\n        \"alpha2Code\": \"SI\",\n        \"alpha3Code\": \"SVN\",\n        \"numericCode\": \"705\",\n        \"default\": false\n    },\n    {\n        \"id\": 195,\n        \"name\": \"Solomon Islands\",\n        \"code\": \"SLB\",\n        \"alpha2Code\": \"SB\",\n        \"alpha3Code\": \"SLB\",\n        \"numericCode\": \"090\",\n        \"default\": false\n    },\n    {\n        \"id\": 208,\n        \"name\": \"Somalia\",\n        \"code\": \"SOM\",\n        \"alpha2Code\": \"SO\",\n        \"alpha3Code\": \"SOM\",\n        \"numericCode\": \"706\",\n        \"default\": false\n    },\n    {\n        \"id\": 248,\n        \"name\": \"South Africa\",\n        \"code\": \"ZAF\",\n        \"alpha2Code\": \"ZA\",\n        \"alpha3Code\": \"ZAF\",\n        \"numericCode\": \"710\",\n        \"default\": false\n    },\n    {\n        \"id\": 90,\n        \"name\": \"South Georgia and the South Sandwich Islands\",\n        \"code\": \"SGS\",\n        \"alpha2Code\": \"GS\",\n        \"alpha3Code\": \"SGS\",\n        \"numericCode\": \"239\",\n        \"default\": false\n    },\n    {\n        \"id\": 122,\n        \"name\": \"South Korea\",\n        \"code\": \"KOR\",\n        \"alpha2Code\": \"KR\",\n        \"alpha3Code\": \"KOR\",\n        \"numericCode\": \"410\",\n        \"default\": false\n    },\n    {\n        \"id\": 198,\n        \"name\": \"South Sudan\",\n        \"code\": \"SSD\",\n        \"alpha2Code\": \"SS\",\n        \"alpha3Code\": \"SSD\",\n        \"numericCode\": \"728\",\n        \"default\": false\n    },\n    {\n        \"id\": 68,\n        \"name\": \"Spain\",\n        \"code\": \"ESP\",\n        \"alpha2Code\": \"ES\",\n        \"alpha3Code\": \"ESP\",\n        \"numericCode\": \"724\",\n        \"default\": false\n    },\n    {\n        \"id\": 131,\n        \"name\": \"Sri Lanka\",\n        \"code\": \"LKA\",\n        \"alpha2Code\": \"LK\",\n        \"alpha3Code\": \"LKA\",\n        \"numericCode\": \"144\",\n        \"default\": false\n    },\n    {\n        \"id\": 197,\n        \"name\": \"Sudan\",\n        \"code\": \"SDN\",\n        \"alpha2Code\": \"SD\",\n        \"alpha3Code\": \"SDN\",\n        \"numericCode\": \"729\",\n        \"default\": false\n    },\n    {\n        \"id\": 209,\n        \"name\": \"Suriname\",\n        \"code\": \"SUR\",\n        \"alpha2Code\": \"SR\",\n        \"alpha3Code\": \"SUR\",\n        \"numericCode\": \"740\",\n        \"default\": false\n    },\n    {\n        \"id\": 203,\n        \"name\": \"Svalbard and Jan Mayen\",\n        \"code\": \"SJM\",\n        \"alpha2Code\": \"SJ\",\n        \"alpha3Code\": \"SJM\",\n        \"numericCode\": \"744\",\n        \"default\": false\n    },\n    {\n        \"id\": 214,\n        \"name\": \"Swaziland\",\n        \"code\": \"SWZ\",\n        \"alpha2Code\": \"SZ\",\n        \"alpha3Code\": \"SWZ\",\n        \"numericCode\": \"748\",\n        \"default\": false\n    },\n    {\n        \"id\": 199,\n        \"name\": \"Sweden\",\n        \"code\": \"SWE\",\n        \"alpha2Code\": \"SE\",\n        \"alpha3Code\": \"SWE\",\n        \"numericCode\": \"752\",\n        \"default\": false\n    },\n    {\n        \"id\": 43,\n        \"name\": \"Switzerland\",\n        \"code\": \"CHE\",\n        \"alpha2Code\": \"CH\",\n        \"alpha3Code\": \"CHE\",\n        \"numericCode\": \"756\",\n        \"default\": false\n    },\n    {\n        \"id\": 213,\n        \"name\": \"Syria\",\n        \"code\": \"SYR\",\n        \"alpha2Code\": \"SY\",\n        \"alpha3Code\": \"SYR\",\n        \"numericCode\": \"760\",\n        \"default\": false\n    },\n    {\n        \"id\": 229,\n        \"name\": \"Taiwan\",\n        \"code\": \"TWN\",\n        \"alpha2Code\": \"TW\",\n        \"alpha3Code\": \"TWN\",\n        \"numericCode\": \"158\",\n        \"default\": false\n    },\n    {\n        \"id\": 220,\n        \"name\": \"Tajikistan\",\n        \"code\": \"TJK\",\n        \"alpha2Code\": \"TJ\",\n        \"alpha3Code\": \"TJK\",\n        \"numericCode\": \"762\",\n        \"default\": false\n    },\n    {\n        \"id\": 230,\n        \"name\": \"Tanzania\",\n        \"code\": \"TZA\",\n        \"alpha2Code\": \"TZ\",\n        \"alpha3Code\": \"TZA\",\n        \"numericCode\": \"834\",\n        \"default\": false\n    },\n    {\n        \"id\": 219,\n        \"name\": \"Thailand\",\n        \"code\": \"THA\",\n        \"alpha2Code\": \"TH\",\n        \"alpha3Code\": \"THA\",\n        \"numericCode\": \"764\",\n        \"default\": false\n    },\n    {\n        \"id\": 218,\n        \"name\": \"Togo\",\n        \"code\": \"TGO\",\n        \"alpha2Code\": \"TG\",\n        \"alpha3Code\": \"TGO\",\n        \"numericCode\": \"768\",\n        \"default\": false\n    },\n    {\n        \"id\": 221,\n        \"name\": \"Tokelau\",\n        \"code\": \"TKL\",\n        \"alpha2Code\": \"TK\",\n        \"alpha3Code\": \"TKL\",\n        \"numericCode\": \"772\",\n        \"default\": false\n    },\n    {\n        \"id\": 225,\n        \"name\": \"Tonga\",\n        \"code\": \"TON\",\n        \"alpha2Code\": \"TO\",\n        \"alpha3Code\": \"TON\",\n        \"numericCode\": \"776\",\n        \"default\": false\n    },\n    {\n        \"id\": 227,\n        \"name\": \"Trinidad and Tobago\",\n        \"code\": \"TTO\",\n        \"alpha2Code\": \"TT\",\n        \"alpha3Code\": \"TTO\",\n        \"numericCode\": \"780\",\n        \"default\": false\n    },\n    {\n        \"id\": 224,\n        \"name\": \"Tunisia\",\n        \"code\": \"TUN\",\n        \"alpha2Code\": \"TN\",\n        \"alpha3Code\": \"TUN\",\n        \"numericCode\": \"788\",\n        \"default\": false\n    },\n    {\n        \"id\": 226,\n        \"name\": \"Turkey\",\n        \"code\": \"TUR\",\n        \"alpha2Code\": \"TR\",\n        \"alpha3Code\": \"TUR\",\n        \"numericCode\": \"792\",\n        \"default\": false\n    },\n    {\n        \"id\": 223,\n        \"name\": \"Turkmenistan\",\n        \"code\": \"TKM\",\n        \"alpha2Code\": \"TM\",\n        \"alpha3Code\": \"TKM\",\n        \"numericCode\": \"795\",\n        \"default\": false\n    },\n    {\n        \"id\": 215,\n        \"name\": \"Turks and Caicos Islands\",\n        \"code\": \"TCA\",\n        \"alpha2Code\": \"TC\",\n        \"alpha3Code\": \"TCA\",\n        \"numericCode\": \"796\",\n        \"default\": false\n    },\n    {\n        \"id\": 228,\n        \"name\": \"Tuvalu\",\n        \"code\": \"TUV\",\n        \"alpha2Code\": \"TV\",\n        \"alpha3Code\": \"TUV\",\n        \"numericCode\": \"798\",\n        \"default\": false\n    },\n    {\n        \"id\": 241,\n        \"name\": \"U.S. Virgin Islands\",\n        \"code\": \"VIR\",\n        \"alpha2Code\": \"VI\",\n        \"alpha3Code\": \"VIR\",\n        \"numericCode\": \"850\",\n        \"default\": false\n    },\n    {\n        \"id\": 232,\n        \"name\": \"Uganda\",\n        \"code\": \"UGA\",\n        \"alpha2Code\": \"UG\",\n        \"alpha3Code\": \"UGA\",\n        \"numericCode\": \"800\",\n        \"default\": false\n    },\n    {\n        \"id\": 231,\n        \"name\": \"Ukraine\",\n        \"code\": \"UKR\",\n        \"alpha2Code\": \"UA\",\n        \"alpha3Code\": \"UKR\",\n        \"numericCode\": \"804\",\n        \"default\": false\n    },\n    {\n        \"id\": 2,\n        \"name\": \"United Arab Emirates\",\n        \"code\": \"ARE\",\n        \"alpha2Code\": \"AE\",\n        \"alpha3Code\": \"ARE\",\n        \"numericCode\": \"784\",\n        \"default\": false\n    },\n    {\n        \"id\": 77,\n        \"name\": \"United Kingdom\",\n        \"code\": \"GBR\",\n        \"alpha2Code\": \"GB\",\n        \"alpha3Code\": \"GBR\",\n        \"numericCode\": \"826\",\n        \"default\": false\n    },\n    {\n        \"id\": 233,\n        \"name\": \"United States Minor Outlying Islands\",\n        \"code\": \"UMI\",\n        \"alpha2Code\": \"UM\",\n        \"alpha3Code\": \"UMI\",\n        \"numericCode\": \"581\",\n        \"default\": false\n    },\n    {\n        \"id\": 234,\n        \"name\": \"United States of America\",\n        \"code\": \"USA\",\n        \"alpha2Code\": \"US\",\n        \"alpha3Code\": \"USA\",\n        \"numericCode\": \"840\",\n        \"default\": false\n    },\n    {\n        \"id\": 235,\n        \"name\": \"Uruguay\",\n        \"code\": \"URY\",\n        \"alpha2Code\": \"UY\",\n        \"alpha3Code\": \"URY\",\n        \"numericCode\": \"858\",\n        \"default\": false\n    },\n    {\n        \"id\": 236,\n        \"name\": \"Uzbekistan\",\n        \"code\": \"UZB\",\n        \"alpha2Code\": \"UZ\",\n        \"alpha3Code\": \"UZB\",\n        \"numericCode\": \"860\",\n        \"default\": false\n    },\n    {\n        \"id\": 243,\n        \"name\": \"Vanuatu\",\n        \"code\": \"VUT\",\n        \"alpha2Code\": \"VU\",\n        \"alpha3Code\": \"VUT\",\n        \"numericCode\": \"548\",\n        \"default\": false\n    },\n    {\n        \"id\": 237,\n        \"name\": \"Vatican\",\n        \"code\": \"VAT\",\n        \"alpha2Code\": \"VA\",\n        \"alpha3Code\": \"VAT\",\n        \"numericCode\": \"336\",\n        \"default\": false\n    },\n    {\n        \"id\": 239,\n        \"name\": \"Venezuela\",\n        \"code\": \"VEN\",\n        \"alpha2Code\": \"VE\",\n        \"alpha3Code\": \"VEN\",\n        \"numericCode\": \"862\",\n        \"default\": false\n    },\n    {\n        \"id\": 242,\n        \"name\": \"Vietnam\",\n        \"code\": \"VNM\",\n        \"alpha2Code\": \"VN\",\n        \"alpha3Code\": \"VNM\",\n        \"numericCode\": \"704\",\n        \"default\": false\n    },\n    {\n        \"id\": 244,\n        \"name\": \"Wallis and Futuna\",\n        \"code\": \"WLF\",\n        \"alpha2Code\": \"WF\",\n        \"alpha3Code\": \"WLF\",\n        \"numericCode\": \"876\",\n        \"default\": false\n    },\n    {\n        \"id\": 66,\n        \"name\": \"Western Sahara\",\n        \"code\": \"ESH\",\n        \"alpha2Code\": \"EH\",\n        \"alpha3Code\": \"ESH\",\n        \"numericCode\": \"732\",\n        \"default\": false\n    },\n    {\n        \"id\": 246,\n        \"name\": \"Yemen\",\n        \"code\": \"YEM\",\n        \"alpha2Code\": \"YE\",\n        \"alpha3Code\": \"YEM\",\n        \"numericCode\": \"887\",\n        \"default\": false\n    },\n    {\n        \"id\": 249,\n        \"name\": \"Zambia\",\n        \"code\": \"ZMB\",\n        \"alpha2Code\": \"ZM\",\n        \"alpha3Code\": \"ZMB\",\n        \"numericCode\": \"894\",\n        \"default\": false\n    },\n    {\n        \"id\": 250,\n        \"name\": \"Zimbabwe\",\n        \"code\": \"ZWE\",\n        \"alpha2Code\": \"ZW\",\n        \"alpha3Code\": \"ZWE\",\n        \"numericCode\": \"716\",\n        \"default\": false\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Client with ExternalID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/external/{{clientExternalID}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "external",
+                "{{clientExternalID}}"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Get Client with ExternalID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client?PageNumber=1&PageSize=10&Direction=true&externalId=100",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client"
+                  ],
+                  "query": [
+                    {
+                      "key": "PageNumber",
+                      "value": "1"
+                    },
+                    {
+                      "key": "PageSize",
+                      "value": "10"
+                    },
+                    {
+                      "key": "Direction",
+                      "value": "true",
+                      "description": "ASC=false / DESC=true Directon (default is DESC=true)"
+                    },
+                    {
+                      "key": "externalId",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 16 Feb 2026 09:43:45 GMT"
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:54d0ca8c-2017-48e8-8b28-d4418bca8052"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\r\n    \"data\": [\r\n        {\r\n            \"clientId\": 1137,\r\n            \"clientName\": \"Execo\",\r\n            \"clientTypeId\": 2,\r\n            \"clientTypeName\": \"Vendor\",\r\n            \"isActive\": true,\r\n            \"isUsed\": true,\r\n            \"externalId\": \"100\",\r\n            \"addresses\": [\r\n                \"Pan Card Road, Baner,,,,,India\"\r\n            ],\r\n            \"emails\": [],\r\n            \"contactNumbers\": [],\r\n            \"contactNames\": []\r\n        }\r\n    ],\r\n    \"statusCode\": 200,\r\n    \"message\": \"Success\",\r\n    \"totalRecords\": 1\r\n}\r\n\r\n"
+            }
+          ]
+        },
+        {
+          "name": "Get Client with ClientID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/{{cpaiClientID}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "{{cpaiClientID}}"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Get Specific Client",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client/6252",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client",
+                    "6252"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Oct 2025 12:56:21 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:c7f17317-c6f8-44de-aa8f-61342a139946"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"clientId\": 1137,\n        \"clientName\": \"Execo\",\n        \"clientTypeId\": 2,\n        \"clientTypeName\": \"Vendor\",\n        \"isActive\": true,\n        \"externalId\": \"100\",\n        \"addresses\": [\n            {\n                \"addressDetailId\": 10280,\n                \"countryName\": \"India\",\n                \"stateName\": null,\n                \"cityName\": null,\n                \"pinCode\": null,\n                \"street1\": \"Pan Card Road, Baner\",\n                \"street2\": null,\n                \"countryId\": 1,\n                \"isUsed\": true,\n                \"isArchived\": false,\n                \"label\": \"Pan Card Road, Baner,India\"\n            }\n        ],\n        \"emails\": [],\n        \"contactNumbers\": [],\n        \"contactNames\": [],\n        \"customFieldGroups\": [\n            {\n                \"id\": 100001,\n                \"name\": \"Additional Party Details\",\n                \"customFields\": [\n                    {\n                        \"customFieldId\": 12,\n                        \"customFieldDisplayName\": \"Trade License / Certificate of Incorporation/POA\",\n                        \"customFieldHelpText\": \"\",\n                        \"customFieldValue\": \"12345\",\n                        \"customFieldValueId\": \"12345\",\n                        \"metaDataType\": \"Partner Type\",\n                        \"type\": \"Text\",\n                        \"displayInRequestJourney\": true\n                    }\n                ]\n            }\n        ]\n    },\n    \"statusCode\": 200,\n    \"message\": \"Success\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Client Custom Field",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "requestorUsername",
+                "value": "ContractPodAi",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{old_api}}/api/{{tenant-name}}/v1/client-types-metadata/get-fields?requestorUsername={{requestorEmail}}",
+              "host": [
+                "{{old_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "v1",
+                "client-types-metadata",
+                "get-fields"
+              ],
+              "query": [
+                {
+                  "key": "requestorUsername",
+                  "value": "{{requestorEmail}}",
+                  "description": "/User Requester Username which you are using while creating a token "
+                }
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": [
+            {
+              "name": "Get Client Custom Field",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "requestorUsername",
+                    "value": "ContractPodAi",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "url": {
+                  "raw": "{{old_api}}/api/{{tenant-name}}/v1/client-types-metadata/get-fields?requestorUsername={{requestorEmail}}",
+                  "host": [
+                    "{{old_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "v1",
+                    "client-types-metadata",
+                    "get-fields"
+                  ],
+                  "query": [
+                    {
+                      "key": "requestorUsername",
+                      "value": "{{requestorEmail}}",
+                      "description": "/User Requester Username which you are using while creating a token "
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 16 Feb 2026 09:23:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1550"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "-1"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1, 2"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-azure-ref",
+                  "value": "20260216T092349Z-1685bfb9556zxw7qhC1BOMsk1s00000001b000000000rzax"
+                },
+                {
+                  "key": "X-Cache",
+                  "value": "CONFIG_NOCACHE"
+                },
+                {
+                  "key": "Accept-Ranges",
+                  "value": "bytes"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"groups\": [\n        {\n            \"groupId\": 100001,\n            \"groupName\": \"Additional Party Details\",\n            \"sortOrder\": 0,\n            \"showGroupInEntireIntakeJourney\": false,\n            \"showGroupInRequestDetailsOnly\": false,\n            \"fields\": [\n                {\n                    \"fieldId\": 12,\n                    \"fieldName\": \"Tradelicensenumber\",\n                    \"fieldDisplayName\": \"Trade License / Certificate of Incorporation/POA\",\n                    \"fieldType\": \"Text\",\n                    \"isMandatory\": false,\n                    \"fieldLibraryId\": 600012,\n                    \"fieldOptions\": [],\n                    \"applicationTypeIds\": [],\n                    \"vendorTypeIds\": null,\n                    \"isVisible\": true,\n                    \"isVisibleOnRequestDetails\": false,\n                    \"isDisabled\": false,\n                    \"defaultValue\": null,\n                    \"customStyleClasses\": null,\n                    \"modelFieldName\": null,\n                    \"helpText\": \"\",\n                    \"addAttachment\": null,\n                    \"visibilityConditions\": null,\n                    \"isForAllApplicationTypes\": false,\n                    \"sortOrder\": 0,\n                    \"visibilityConditionObject\": null,\n                    \"metadataTypeId\": 2,\n                    \"showDetails\": false,\n                    \"defaultFileType\": 0,\n                    \"filtercolumnId\": 0,\n                    \"isNegativeAllowed\": false,\n                    \"isZeroAccepted\": false,\n                    \"includeTimeZone\": false,\n                    \"customIntakeFormFieldMasterId\": 0,\n                    \"customIntakeFormFieldFilterId\": 0,\n                    \"isEvergreenVisible\": false,\n                    \"isDynamicUserGroup\": false,\n                    \"isAutoRenewalLengthAndCycleVisible\": false,\n                    \"isAutoRenewalLengthAndCycleRequestDetail\": false,\n                    \"allowToAddOptionFromRequest\": false,\n                    \"applicationTypeMandatoryData\": [\n                        {\n                            \"applicationTypeId\": 1564,\n                            \"isMandatory\": true\n                        },\n                        {\n                            \"applicationTypeId\": 1565,\n                            \"isMandatory\": true\n                        },\n                        {\n                            \"applicationTypeId\": 1566,\n                            \"isMandatory\": true\n                        },\n                        {\n                            \"applicationTypeId\": 1567,\n                            \"isMandatory\": true\n                        },\n                        {\n                            \"applicationTypeId\": 1568,\n                            \"isMandatory\": true\n                        }\n                    ],\n                    \"showSelectAll\": false,\n                    \"multiSelectOptionsCount\": 0,\n                    \"guidanceText\": null,\n                    \"cascadingDropdownType\": 0,\n                    \"multiSelectSelectAllSettings\": null,\n                    \"importantDateFieldId\": null,\n                    \"isCustomImportantDate\": null\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Client",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientName\": \"TestClient301\",\r\n    \"clientTypeId\": 1,\r\n    \"isActive\": true,\r\n    \"externalId\": \"100301\",\r\n    \"addresses\": [\r\n        {\r\n            \"street1\": \"Name to Street 1\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"pinCode\": \"432567\",\r\n            \"countryId\": 1,\r\n            \"stateName\": \"Maharashtra\",\r\n            \"cityName\": \"Mumbai\",\r\n            \"isArchived\": false\r\n        },\r\n        {\r\n            \"street1\": \"Name to Street 2\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"pinCode\": \"456789\",\r\n            \"countryId\": 234,\r\n            \"stateName\": \"Florida\",\r\n            \"cityName\": \"Florida City\",\r\n            \"isArchived\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumber\": \"9422856778\"\r\n        },\r\n        {\r\n            \"contactNumber\": \"9283738378\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailId\": \"test1@contractpodai.com\"\r\n        },\r\n        {\r\n            \"emailId\": \"test2@contractpodai.com\"\r\n        },\r\n        {\r\n            \"emailId\": \"test3@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactName\": \"TestName\",\r\n            \"IsPrimary\": true,\r\n            \"address\": \"Name to Street 1, Name to Street 2, Mumbai, Maharashtra, 432567, India\",\r\n            \"contact\": \"9422856778\",\r\n            \"email\": \"test1@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        {\r\n            \"customFieldId\": 12,\r\n            \"customFieldValue\": \"Test11\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Post Client",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clientId\": 0,\r\n    \"clientName\": \"Test CPAI Client Creation Testing \",\r\n    \"clientTypeId\": 8,\r\n    \"isActive\": true,\r\n    \"externalId\": \"400034\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressDetailId\": 0,\r\n            \"countryName\": \"Brazil\",\r\n            \"stateName\": \"Test\",\r\n            \"cityName\": \"Test\",\r\n            \"pinCode\": \"Test\",\r\n            \"street1\": \"Test TCF Address\",\r\n            \"street2\": \"Test\",\r\n            \"countryId\": 31,\r\n            \"isUsed\": true,\r\n            \"isArchived\": false\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailDetailId\": 0,\r\n            \"emailId\": \"navin.jagwani@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumberDetailId\": 0,\r\n            \"contactNumber\": \"9999999999\"\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactNameDetailId\": 0,\r\n            \"contactName\": \"Test\",\r\n            \"IsPrimary\": true,\r\n            \"address\": \"Test TCF Address, Test, Test, Test, Test, Brazil\",\r\n            \"contact\": \"9999999999\",\r\n            \"email\": \"navin.jagwani@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFieldGroups\": [\r\n        {\r\n            \"customFieldId\":\"81\",\r\n            \"customFieldValue\":\"Parent Customer\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Oct 2025 13:09:40 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:c7f17317-c6f8-44de-aa8f-61342a139946"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": 6252,\n    \"statusCode\": 200,\n    \"message\": \"Client record added successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Client",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientName\": \"TestClient301\",\r\n    \"clientTypeId\": 1,\r\n    \"clientTypeName\": \"Customer\",\r\n    \"isActive\": true,\r\n    \"externalId\": \"100301\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressDetailId\": 10283,\r\n            \"countryName\": \"India\",\r\n            \"stateName\": \"Maharashtra\",\r\n            \"cityName\": \"Mumbai\",\r\n            \"pinCode\": \"432567\",\r\n            \"street1\": \"Name to Street 1\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"countryId\": 1,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Name to Street 1,Name to Street 2,Mumbai,Maharashtra,432567,India\"\r\n        },\r\n        {\r\n            \"countryName\": \"United States of America\",\r\n            \"stateName\": \"Florida\",\r\n            \"cityName\": \"Florida City\",\r\n            \"pinCode\": \"456789\",\r\n            \"street1\": \"Name to Street 2\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"countryId\": 234,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Name to Street 2,Name to Street 2,Florida City,Florida,456789,United States of America\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailId\": \"test1@contractpodai.com\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"emailId\": \"test2@contractpodai.com\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"emailId\": \"test3@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumber\": \"9422856778\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"contactNumber\": \"9283738378\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactName\": \"TestName\",\r\n            \"isPrimary\": true,\r\n            \"address\": \"Name to Street 2, Name to Street 2, Florida City, Florida, 456789, United States of America\",\r\n            \"contact\": \"9422856778\",\r\n            \"email\": \"test1@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        {\r\n            \"customFieldId\": 12,\r\n            \"customFieldValue\": \"Test11\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/{{cpaiClientID}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "{{cpaiClientID}}"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Put Client",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clientName\": \"Test CPAI Client Creation Testing \",\r\n    \"clientTypeId\": 8,\r\n    \"clientTypeName\": \"Supplier Master\",\r\n    \"isActive\": true,\r\n    \"externalId\": \"400034\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressDetailId\": 0,\r\n            \"countryName\": \"Brazil\",\r\n            \"stateName\": \"Test\",\r\n            \"cityName\": \"Test1\",\r\n            \"pinCode\": \"Test\",\r\n            \"street1\": \"Test TCF Address1\",\r\n            \"street2\": \"Test\",\r\n            \"countryId\": 31,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Test TCF Address,Test,Test,Test,Test,Brazil\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailDetailId\": 56,\r\n            \"emailId\": \"navin.jagwani@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumberDetailId\": 35,\r\n            \"contactNumber\": \"9999999999\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactNameDetailId\": 16,\r\n            \"contactName\": \"Test\",\r\n            \"isPrimary\": true,\r\n            \"address\": \"Test TCF Address1, Test, Test1, Test, Test, Brazil\",\r\n            \"contact\": \"9999999999\",\r\n            \"email\": \"navin.jagwani@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        {\r\n            \"customFieldId\": 81,\r\n            \"customFieldValue\": \"Net 60\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client/6252",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client",
+                    "6252"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Oct 2025 13:12:41 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:c7f17317-c6f8-44de-aa8f-61342a139946"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": 6252,\n    \"statusCode\": 200,\n    \"message\": \"Client record updated successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Client withoutID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientName\": \"TestClient301\",\r\n    \"clientTypeId\": 1,\r\n    \"clientTypeName\": \"Customer\",\r\n    \"isActive\": true,\r\n    \"externalId\": \"100301\",\r\n    \"addresses\": [\r\n             \r\n        {\r\n            \"stateName\": \"Maharashtra\",\r\n            \"cityName\": \"Pune\",\r\n            \"pinCode\": \"411004\",\r\n            \"street1\": \"Name to Street 7\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"countryId\": 2,          \r\n            \"isArchived\": false\r\n        },  \r\n        {\r\n           \r\n           \"stateName\": \"Maharashtra\",\r\n            \"cityName\": \"Pune\",\r\n            \"pinCode\": \"411004\",\r\n            \"street1\": \"Name to Street 3,\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"countryId\": 2,    \r\n            \"isArchived\": false\r\n        },\r\n        {\r\n            \"countryName\": \"United States of America\",\r\n            \"stateName\": \"Florida\",\r\n            \"cityName\": \"Florida City\",\r\n            \"pinCode\": \"456789\",\r\n            \"street1\": \"Name to Street 2\",\r\n            \"street2\": \"Name to Street 2\",\r\n            \"countryId\": 234,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Name to Street 2,Name to Street 2,Florida City,Florida,456789,United States of America\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailId\": \"test1@contractpodai.com\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"emailId\": \"test2@contractpodai.com\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"emailId\": \"test3@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumber\": \"9422856778\",\r\n            \"isUsed\": false\r\n        },\r\n        {\r\n            \"contactNumber\": \"9283738378\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactName\": \"TestName\",\r\n            \"isPrimary\": true,\r\n            \"address\": \"Name to Street 2, Name to Street 2, Florida City, Florida, 456789, United States of America\",\r\n            \"contact\": \"9422856778\",\r\n            \"email\": \"test1@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        \r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/{{cpaiClientID}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "{{cpaiClientID}}"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Put Client",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clientName\": \"Test CPAI Client Creation Testing \",\r\n    \"clientTypeId\": 8,\r\n    \"clientTypeName\": \"Supplier Master\",\r\n    \"isActive\": true,\r\n    \"externalId\": \"400034\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressDetailId\": 0,\r\n            \"countryName\": \"Brazil\",\r\n            \"stateName\": \"Test\",\r\n            \"cityName\": \"Test1\",\r\n            \"pinCode\": \"Test\",\r\n            \"street1\": \"Test TCF Address1\",\r\n            \"street2\": \"Test\",\r\n            \"countryId\": 31,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Test TCF Address,Test,Test,Test,Test,Brazil\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailDetailId\": 56,\r\n            \"emailId\": \"navin.jagwani@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumberDetailId\": 35,\r\n            \"contactNumber\": \"9999999999\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactNameDetailId\": 16,\r\n            \"contactName\": \"Test\",\r\n            \"isPrimary\": true,\r\n            \"address\": \"Test TCF Address1, Test, Test1, Test, Test, Brazil\",\r\n            \"contact\": \"9999999999\",\r\n            \"email\": \"navin.jagwani@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        {\r\n            \"customFieldId\": 81,\r\n            \"customFieldValue\": \"Net 60\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client/6252",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client",
+                    "6252"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Oct 2025 13:12:41 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:c7f17317-c6f8-44de-aa8f-61342a139946"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": 6252,\n    \"statusCode\": 200,\n    \"message\": \"Client record updated successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Patch Update Client",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientName\": \"TestClient301_updated\",\r\n    \"emails\": [\r\n        {\r\n            \"emailId\": \"test389@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"addresses\": [\r\n        {\r\n            \"stateName\": \"Maharashtra\",\r\n            \"cityName\": \"Pune\",\r\n            \"pinCode\": \"411004\",\r\n            \"street1\": \"Name to Street 1,\",\r\n            \"street2\": \"Name to Street 221\",\r\n            \"countryId\": 1,          \r\n            \"isArchived\": false\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        \r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/{{cpaiClientID}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "{{cpaiClientID}}"
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": [
+            {
+              "name": "Patch Client",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clientName\": \"Test CPAI Client Creation Testing \",\r\n    \"clientTypeId\": 8,\r\n    \"clientTypeName\": \"Supplier Master\",\r\n    \"isActive\": true,\r\n    \"externalId\": \"400034\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressDetailId\": 0,\r\n            \"countryName\": \"Brazil\",\r\n            \"stateName\": \"Test\",\r\n            \"cityName\": \"Test1\",\r\n            \"pinCode\": \"Test\",\r\n            \"street1\": \"Test TCF Address1\",\r\n            \"street2\": \"Test\",\r\n            \"countryId\": 31,\r\n            \"isUsed\": false,\r\n            \"isArchived\": false,\r\n            \"label\": \"Test TCF Address,Test,Test,Test,Test,Brazil\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"emailDetailId\": 56,\r\n            \"emailId\": \"navin.jagwani@contractpodai.com\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNumbers\": [\r\n        {\r\n            \"contactNumberDetailId\": 35,\r\n            \"contactNumber\": \"9999999999\",\r\n            \"isUsed\": false\r\n        }\r\n    ],\r\n    \"contactNames\": [\r\n        {\r\n            \"contactNameDetailId\": 16,\r\n            \"contactName\": \"Test\",\r\n            \"isPrimary\": true,\r\n            \"address\": \"Test TCF Address1, Test, Test1, Test, Test, Brazil\",\r\n            \"contact\": \"9999999999\",\r\n            \"email\": \"navin.jagwani@contractpodai.com\"\r\n        }\r\n    ],\r\n    \"customFields\": [\r\n        {\r\n            \"customFieldId\": 81,\r\n            \"customFieldValue\": \"Net 60\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{new_api}}/api/{{tenant-name}}/client/6252",
+                  "host": [
+                    "{{new_api}}"
+                  ],
+                  "path": [
+                    "api",
+                    "{{tenant-name}}",
+                    "client",
+                    "6252"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Oct 2025 13:12:41 GMT"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Request-Context",
+                  "value": "appId=cid-v1:c7f17317-c6f8-44de-aa8f-61342a139946"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": 6252,\n    \"statusCode\": 200,\n    \"message\": \"Client record updated successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Search Client",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{requestorUserId}},\r\n    \"includeAggregations\": false,\r\n    \"filter\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 20,\r\n        \"clientIds\": [],\r\n        \"clientNames\": [],\r\n        \"fields\": [{\r\n                \"fieldName\": \"modifiedOn\",\r\n                \"numberValues\": [\r\n                    \"2026-05-06\"\r\n                ]\r\n            }]\r\n    },\r\n    \"isActive\": false,\r\n    \"sort\": [\r\n        {\r\n            \"fieldName\": \"ClientName\",\r\n            \"isCustom\": false,\r\n            \"direction\": \"asc\"\r\n        }\r\n    ],\r\n    \"columns\": []\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/client/search",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "client",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// This script runs after the request is sent",
+              "",
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "// Parse the JSON response body",
+              "const responseData = pm.response.json();",
+              "",
+              "// --- Save to Collection Variables ---",
+              "",
+              "// 1. Get the access token from the response",
+              "const accessToken = responseData.access_token;",
+              "",
+              "// 2. Set the access token as a collection variable",
+              "pm.collectionVariables.set(\"accessToken\", accessToken);",
+              "",
+              "console.log(\"Access Token saved to collection.\");",
+              "",
+              "",
+              "// 3. Get the refresh token from the response",
+              "const refreshToken = responseData.refresh_token;",
+              "",
+              "// 4. Set the refresh token as a collection variable",
+              "pm.collectionVariables.set(\"refreshToken\", refreshToken);",
+              "",
+              "console.log(\"Refresh Token saved to collection.\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"grant_type\": \"client_credentials\",\n    \"client_id\": \"{{cred_client_id}}\",\n    \"client_secret\": \"{{cred_client_secret}}\",\n    \"domain\": \"{{tenant-name}}\",\n    \"username\": \"{{requestorEmail}}\"\n}\n\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{auth_api}}/token",
+          "host": [
+            "{{auth_api}}"
+          ],
+          "path": [
+            "token"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get User details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const responseData = pm.response.json();\r",
+              "pm.collectionVariables.set('requestorUserId', responseData[0].userId);\r",
+              "pm.collectionVariables.set('requestorDepartmentId', responseData[0].departmentId);\r",
+              "pm.collectionVariables.set('requestorUserName', responseData[0].username);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{new_api}}/api/{{tenant-name}}/user?searchtext={{requestorFullName}}",
+          "host": [
+            "{{new_api}}"
+          ],
+          "path": [
+            "api",
+            "{{tenant-name}}",
+            "user"
+          ],
+          "query": [
+            {
+              "key": "searchtext",
+              "value": "{{requestorFullName}}"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get User details",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{new_api}}/api/{{tenant-name}}/user?searchtext={{requestorFullName}}",
+              "host": [
+                "{{new_api}}"
+              ],
+              "path": [
+                "api",
+                "{{tenant-name}}",
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "searchtext",
+                  "value": "{{requestorFullName}}"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 28 Oct 2025 11:31:12 GMT"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Request-Context",
+              "value": "appId=cid-v1:3e115dd6-f3c7-4021-8340-3a61aebce331"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"userId\": 9140,\n        \"fullName\": \"neha dharmadhikari\",\n        \"title\": null,\n        \"isActive\": true,\n        \"description\": null,\n        \"username\": \"neha.dharmadhikari@contractpodai.com\",\n        \"email\": \"neha.dharmadhikari@contractpodai.com\",\n        \"roleId\": 100001,\n        \"roleName\": \"Administrator\",\n        \"departmentId\": 1,\n        \"departmentNames\": \"CPAi Support\",\n        \"organizationId\": 1,\n        \"licenseId\": 1,\n        \"licenseName\": \"Admin\",\n        \"isExternalUser\": false,\n        \"outlookCalendarFileName\": null\n    }\n]"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_api",
+      "value": "https://cloudstaging4.contractpod.com/cpaimt_auth/auth"
+    },
+    {
+      "key": "old_api",
+      "value": "https://cloudstaging4.contractpod.com/cpaimt_api"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    },
+    {
+      "key": "tenant-name",
+      "value": "mashreqbank"
+    },
+    {
+      "key": "new_api",
+      "value": "https://cpai-productapi-stg4.azurewebsites.net"
+    },
+    {
+      "key": "refreshToken",
+      "value": ""
+    },
+    {
+      "key": "requestorUserId",
+      "value": "9068"
+    },
+    {
+      "key": "requestorEmail",
+      "value": "first.last@some.com"
+    },
+    {
+      "key": "requestorFullName",
+      "value": "first last"
+    },
+    {
+      "key": "cpaiClientID",
+      "value": "1138"
+    },
+    {
+      "key": "requestorUserName",
+      "value": "first.last@some.com"
+    },
+    {
+      "key": "cred_client_id",
+      "value": ""
+    },
+    {
+      "key": "cred_client_secret",
+      "value": ""
+    },
+    {
+      "key": "requestorDepartmentId",
+      "value": "1"
+    },
+    {
+      "key": "clientExternalID",
+      "value": ""
+    }
+  ]
+}
+Displaying Leah Client Operation Copy.postman_collection.json.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

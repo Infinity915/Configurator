@@ -1,0 +1,133 @@
+/* ========== CSS CUSTOM PROPERTIES - THEME VARIABLES ========== */
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-hover: #f5f5f5;
+  
+  --text-primary: #3b4151;
+  --text-secondary: #555;
+  --text-tertiary: #999;
+  
+  --border-color: #d9d9d9;
+  --border-light: #e8e8e8;
+  --border-strong: #ccc;
+  
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  
+  /* Disabled state */
+  --color-disabled: #cbd5e1;
+  --text-disabled: #9ca3af;
+  
+  /* Color Brand */
+  --color-success: #10b981;
+  --color-success-hover: #0d9668;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-info: #61affe;
+  --color-code-bg: #282c34;
+  --color-code-text: #abb2bf;
+  
+  /* API Method Colors */
+  --method-get-border: #61affe;
+  --method-get-bg: rgba(97, 175, 254, 0.1);
+  --method-post-border: #49cc90;
+  --method-post-bg: rgba(73, 204, 144, 0.1);
+  --method-put-border: #fca130;
+  --method-put-bg: rgba(252, 161, 48, 0.1);
+  --method-patch-border: #50e3c2;
+  --method-patch-bg: rgba(80, 227, 194, 0.1);
+  --method-delete-border: #f93e3e;
+  --method-delete-bg: rgba(249, 62, 62, 0.1);
+}
+
+[data-theme='dark'] {
+  /* Dark Mode */
+  --bg-primary: #1a1d23;
+  --bg-secondary: #262d38;
+  --bg-tertiary: #1f2937;
+  --bg-hover: #323d4a;
+  
+  --text-primary: #e8ecf1;
+  --text-secondary: #d1d7e0;
+  --text-tertiary: #888;
+  
+  --border-color: #444;
+  --border-light: #333;
+  --border-strong: #555;
+  
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+  
+  --scrollbar-track: #2a3038;
+  --scrollbar-thumb: #404a56;
+  --scrollbar-thumb-hover: #525d6f;
+  
+  /* Disabled state */
+  --color-disabled: #4b5563;
+  --text-disabled: #6b7280;
+  
+  /* Keep brand colors consistent but slightly adjusted for dark */
+  --color-success: #10b981;
+  --color-success-hover: #0d9668;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-info: #7dd3fc;
+  --color-code-bg: #1f2937;
+  --color-code-text: #c5c8c6;
+  
+  /* API Method Colors (slightly brighter for dark mode) */
+  --method-get-border: #60a5fa;
+  --method-get-bg: rgba(96, 165, 250, 0.15);
+  --method-post-border: #4ade80;
+  --method-post-bg: rgba(74, 222, 128, 0.15);
+  --method-put-border: #fbbf24;
+  --method-put-bg: rgba(251, 191, 36, 0.15);
+  --method-patch-border: #2dd4bf;
+  --method-patch-bg: rgba(45, 212, 191, 0.15);
+  --method-delete-border: #f87171;
+  --method-delete-bg: rgba(248, 113, 113, 0.15);
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: sans-serif; 
+  background-color: var(--bg-primary); 
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { 
+  width: 8px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: var(--scrollbar-track); 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: var(--scrollbar-thumb); 
+  border-radius: 4px; 
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover { 
+  background: var(--scrollbar-thumb-hover); 
+}

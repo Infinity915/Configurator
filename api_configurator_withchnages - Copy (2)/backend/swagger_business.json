@@ -1,0 +1,443 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ContractPodAi Business API",
+    "description": "ContractPodAi API strictly requires an Authorized Bearer Token in order to access the below Endpoints. Please use a Valid Token to execute the API Endpoints.",
+    "contact": {
+      "name": "Company",
+      "url": "https://contractpodai.com/"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/business/v{version}/contract-request/{id}": {
+      "get": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Get Contract Request details by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Contract request id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Partially update an existing Contract Request using names.",
+        "description": "Sample request:\r\n\r\n    PATCH - /contract-request/901227",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the contract request to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The partial data model containing string-based references to update.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialUpdateContractRequestByName"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Fully update an existing Contract Request using names.",
+        "description": "Sample request:\r\n\r\n    PUT - /contract-request/901227",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the contract request to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The complete contract request data model containing string-based references.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContractRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/business/v{version}/contract-request": {
+      "post": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Creates a new Contract Request using names for related entities.",
+        "description": "Sample request:\r\n\r\n    POST - /contract-request",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The contract request data model containing string-based references.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContractRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/business/v{version}/contract-request/ById": {
+      "post": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Creates a new Contract Request using internal system IDs for related entities.",
+        "description": "Sample request:\r\n\r\n    POST - /contract-request/ById",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The contract request data model containing ID-based references.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddContractRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/business/v{version}/contract-request/ById/{id}": {
+      "patch": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Partially update an existing Contract Request using internal system IDs.",
+        "description": "Sample request:\r\n\r\n    PATCH - /contract-request/ById/901227",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the contract request to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The partial data model containing ID-based references to update.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialUpdateContractRequestById"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ContractRequest"
+        ],
+        "summary": "Fully update an existing Contract Request using internal system IDs.",
+        "description": "Sample request:\r\n\r\n    PUT - /contract-request/ById/901227",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique identifier of the contract request to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The complete contract request data model containing ID-based references.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddContractRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/business/v{version}/version/documentupload/{requestId}": {
+      "post": {
+        "tags": [
+          "DocumentVersion"
+        ],
+        "summary": "Uploads a new document version for a specific Contract Request.",
+        "description": "This endpoint supports two types of request bodies.",
+        "parameters": [
+          {
+            "name": "requestId",
+            "in": "path",
+            "description": "The unique identifier of the associated contract request.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The file upload request.",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fileUpload": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "isAI": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddDocumentVersion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/business/v{version}/status/{id}": {
+      "get": {
+        "tags": [
+          "Status"
+        ],
+        "summary": "Get workflow status by id",
+        "description": "Sample request:\r\n\r\n    GET - /status/contract-create-0HNMHR5FULNHF:00000002-v1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Workflow id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ContractRequest": {
+        "type": "object",
+        "properties": {
+          "applicationName": {
+            "type": "string"
+          },
+          "applicationTypeName": {
+            "type": "string"
+          },
+          "requestTypeName": {
+            "type": "string"
+          }
+        }
+      },
+      "AddContractRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "applicationTypeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PartialUpdateContractRequestById": {
+        "type": "object",
+        "properties": {
+          "assignees": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PartialUpdateContractRequestByName": {
+        "type": "object",
+        "properties": {
+          "assignees": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AddDocumentVersion": {
+        "type": "object",
+        "properties": {
+          "fileUpload": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "isAI": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
